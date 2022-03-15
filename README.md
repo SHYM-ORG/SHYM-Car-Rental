@@ -5,3 +5,4 @@
  <li><h4>DBA name: shym_db_admin</h4></li>
  <li><h4>DBA password: shym_pass</h4></li>
 </ul>
+<t/><h3><i>The DBA must have all privileges on the database</i></h3>
