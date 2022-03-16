@@ -1,6 +1,7 @@
 package com.shym.backend.model;
 
 
+import com.shym.backend.enumeration.Role;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -30,14 +31,25 @@ public class User {
     @NotEmpty(message = "Password must not be an empty string")
     private String password;
 
-    public User(String id, String phone, String email, String password) {
+    private Role role;
+
+    public User(String id, String phone, String email, String password, Role role) {
         this.id = id;
         this.phone = phone;
         this.email = email;
         this.password = password;
+        this.role = role;
     }
 
     public User() {}
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
 
     public String getId() {
         return id;

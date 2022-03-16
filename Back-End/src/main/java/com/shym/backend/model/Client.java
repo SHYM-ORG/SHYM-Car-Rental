@@ -2,6 +2,7 @@ package com.shym.backend.model;
 
 import com.shym.backend.enumeration.CarCategory;
 import com.shym.backend.enumeration.CarModel;
+import com.shym.backend.enumeration.Role;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -26,8 +27,8 @@ public class Client extends User{
 
     private String lastLocation;
 
-    public Client(String id, String phone, String email, String password, String firstName, String lastName, List<CarCategory> faveCategories, List<CarModel> faveModels, String lastLocation) {
-        super(id, phone, email, password);
+    public Client(String id, String phone, String email, String password, Role role, String firstName, String lastName, List<CarCategory> faveCategories, List<CarModel> faveModels, String lastLocation) {
+        super(id, phone, email, password, role);
         this.firstName = firstName;
         this.lastName = lastName;
         this.faveCategories = faveCategories;
