@@ -2,6 +2,7 @@ package com.shym.backend.security;
 
 import com.shym.backend.enumeration.Role;
 import com.shym.backend.model.User;
+import com.shym.backend.service.UserService;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,8 +14,12 @@ import java.util.List;
 public class UserPrincipal implements UserDetails {
 
     private User user;
+    private UserService userService;
 
-    public UserPrincipal(User user) {this.user = user;}
+    public UserPrincipal(User user, UserService userService) {
+        this.user = user;
+        this.userService = userService;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -51,5 +56,12 @@ public class UserPrincipal implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public boolean isFirstTime() {return user.isFirstTime();}
+
+    public void setNotFirstTime() {
+        user.setFirstTime(false);
+        userService.updateUser(user);
     }
 }

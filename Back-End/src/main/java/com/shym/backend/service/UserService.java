@@ -16,4 +16,8 @@ public class UserService<T extends User>{
     public User getUserWithEmail(String email) throws Throwable {
         return (User) userRepository.findByEmail(email).orElseThrow(() ->new RuntimeException("jkdfj"));
     }
+
+    public User updateUser(User user) {
+        return (T) userRepository.save(user);
+    }
 }

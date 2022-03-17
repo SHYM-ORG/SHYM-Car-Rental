@@ -20,8 +20,6 @@ public class User {
     @GenericGenerator(name = "UUID",  strategy = "org.hibernate.id.UUIDGenerator")
     private String id;
 
-    private String phone;
-
     @NotNull(message = "Email should not be null!")
     @NotEmpty(message = "Email must not be an empty string")
     @Email(message = "Not an email")
@@ -31,17 +29,27 @@ public class User {
     @NotEmpty(message = "Password must not be an empty string")
     private String password;
 
+    @NotNull(message = "Role should not be null!")
     private Role role;
 
-    public User(String id, String phone, String email, String password, Role role) {
+    private boolean firstTime;
+
+    public User(String id, String email, String password, Role role) {
         this.id = id;
-        this.phone = phone;
         this.email = email;
         this.password = password;
         this.role = role;
     }
 
     public User() {}
+
+    public boolean isFirstTime() {
+        return firstTime;
+    }
+
+    public void setFirstTime(boolean firstTime) {
+        this.firstTime = firstTime;
+    }
 
     public Role getRole() {
         return role;
@@ -53,14 +61,6 @@ public class User {
 
     public String getId() {
         return id;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
     }
 
     public String getEmail() {

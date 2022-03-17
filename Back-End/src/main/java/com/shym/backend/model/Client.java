@@ -27,8 +27,8 @@ public class Client extends User{
 
     private String lastLocation;
 
-    public Client(String id, String phone, String email, String password, Role role, String firstName, String lastName, List<CarCategory> faveCategories, List<CarModel> faveModels, String lastLocation) {
-        super(id, phone, email, password, role);
+    public Client(String id, String email, String password, Role role, String firstName, String lastName, List<CarCategory> faveCategories, List<CarModel> faveModels, String lastLocation) {
+        super(id, email, password, role);
         this.firstName = firstName;
         this.lastName = lastName;
         this.faveCategories = faveCategories;

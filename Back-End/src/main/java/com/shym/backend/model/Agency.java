@@ -14,17 +14,29 @@ public class Agency extends User{
     @NotNull(message = "location is required!")
     private String location;
 
-    @NotNull(message = "description")
+    @NotNull(message = "description is required")
     private String description;
 
-    public Agency(String id, String phone, String email, String password, Role role, String name, String location, String description) {
-        super(id, phone, email, password, role);
+    @NotNull(message = "description is required")
+    private String phone;
+
+    public Agency(String id, String email, String password, Role role, String name, String location, String description, String phone1) {
+        super(id, email, password, role);
         this.name = name;
         this.location = location;
         this.description = description;
+        this.phone = phone1;
     }
 
     public Agency() {}
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     public String getName() {
         return name;
