@@ -2,56 +2,48 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <device id="_device_class_phone" />
+        <device id="automotive_1024p_landscape" />
+        <device id="_device_class_desktop" />
+        <option name="nonWearDeviceLastStateName" value="portrait" />
+      </config>
     </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7df66771-e5c7-4695-9a2c-9f07cc83ff1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Front-End/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/controller/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/controller/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/dto/JwtTokenDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/dto/JwtTokenDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/security/UserPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/security/UserPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/androidTest/java/com/shym/front_end/ExampleInstrumentedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/main/res/values-night/themes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/main/res/values/themes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/app/src/test/java/com/shym/front_end/ExampleUnitTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/settings.gradle" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueAgency/AgencyLocationFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueAgency/BienvenueAgencyActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueClient/BienvenueClientActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueClient/BienvenueFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueClient/ButtonClickListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueClient/ModelPreferenceFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/gradiant_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/logolite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/logoshym.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/merriweather_black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/merriweather_bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/sora.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_bienvenue.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_agency_location.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bienvenue.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_model_preference.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/home/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/home/HomeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +55,14 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="resourceFile" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -79,6 +79,15 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="memory.settings.postsync.last.time.stamp" value="1647874211481" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.572395827">
+      <recent name="com.shym.front_end.ui.bienvenue" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.shym.front_end.ui.bienvenueClient" />
+      <recent name="com.shym.front_end.ui.bienvenueAgency" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -162,5 +171,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
