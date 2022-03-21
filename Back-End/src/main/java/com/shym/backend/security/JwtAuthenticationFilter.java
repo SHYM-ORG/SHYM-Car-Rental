@@ -58,7 +58,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
         response.setContentType("application/json");
         //response.getOutputStream().write(mapper.writeValueAsBytes(Map.of(principal.getAuthorities(),new JwtTokenDto(JwtProperties.TOKEN_PREFIX + jwtToken))));
-        response.getOutputStream().write(mapper.writeValueAsBytes(new JwtTokenDto(JwtProperties.TOKEN_PREFIX + jwtToken, principal.isFirstTime())));
+        response.getOutputStream().write(mapper.writeValueAsBytes(new JwtTokenDto(JwtProperties.TOKEN_PREFIX + jwtToken, principal.isFirstTime(), principal.getRole())));
         principal.setNotFirstTime();
     }
 }

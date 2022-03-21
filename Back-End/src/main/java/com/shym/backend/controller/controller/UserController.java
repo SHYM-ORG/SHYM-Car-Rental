@@ -20,8 +20,9 @@ public class UserController {
     ClientService clientService;
     AgencyService agencyService;
 
-    public UserController(ClientService clientService) {
+    public UserController(ClientService clientService, AgencyService agencyService) {
         this.clientService = clientService;
+        this.agencyService = agencyService;
     }
 
     @PostMapping("/create/client")

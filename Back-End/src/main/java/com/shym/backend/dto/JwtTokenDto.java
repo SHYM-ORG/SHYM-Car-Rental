@@ -1,3 +1,5 @@
 package com.shym.backend.dto;
 
-public record JwtTokenDto(String token, boolean firstTime) {}
+import com.shym.backend.enumeration.Role;
+
+public record JwtTokenDto(String token, boolean firstTime, Role role) {}

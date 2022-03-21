@@ -1,5 +1,6 @@
 package com.shym.backend.security;
 
+import com.shym.backend.enumeration.Role;
 import com.shym.backend.model.User;
 import com.shym.backend.service.UserService;
 import org.springframework.security.core.GrantedAuthority;
@@ -62,5 +63,9 @@ public class UserPrincipal implements UserDetails {
     public void setNotFirstTime() {
         user.setFirstTime(false);
         userService.updateUser(user);
+    }
+
+    public Role getRole() {
+        return this.user.getRole();
     }
 }
