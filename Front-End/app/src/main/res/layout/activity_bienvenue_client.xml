@@ -7,10 +7,10 @@
     tools:context=".ui.bienvenueAgency.BienvenueAgencyActivity">
 
     <fragment
-        android:name="com.shym.front_end.ui.bienvenueClient.BienvenueFragment"
+        android:name="com.shym.front_end.ui.bienvenueClient.BienvenueClientFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/bienvenueFragment"
+        android:id="@+id/bienvenueFragmentClient"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

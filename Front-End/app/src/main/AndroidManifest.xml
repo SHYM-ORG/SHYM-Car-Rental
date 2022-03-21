@@ -29,6 +29,9 @@
             android:name=".ui.bienvenueAgency.BienvenueAgencyActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.bienvenueClient.BienvenueClientActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name">

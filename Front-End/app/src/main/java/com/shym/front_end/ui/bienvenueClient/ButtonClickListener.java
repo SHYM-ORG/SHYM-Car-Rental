@@ -19,12 +19,14 @@ public class ButtonClickListener implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case  R.id.bienvenueAgence: {
-                Toast.makeText(context, "agence", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent((Activity)context, BienvenueAgencyActivity.class);
                 context.startActivity(intent);
+                break;
             }
             case R.id.bienvenueClient: {
-
+                Intent intent = new Intent((Activity)context, BienvenueClientActivity.class);
+                context.startActivity(intent);
+                break;
             }
         }
     }

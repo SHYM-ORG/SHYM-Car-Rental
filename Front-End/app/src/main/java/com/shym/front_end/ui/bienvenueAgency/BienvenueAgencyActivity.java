@@ -11,6 +11,6 @@ public class BienvenueAgencyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bienvenue);
+        setContentView(R.layout.activity_bienvenue_agency);
     }
 }
