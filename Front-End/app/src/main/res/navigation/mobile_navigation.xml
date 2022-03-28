@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.shym.front_end.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_rental"
+        android:name="com.shym.front_end.RentalFragment"
+        android:label="rental"
+        tools:layout="@layout/fragment_rental" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.shym.front_end.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_profile"
+        android:name="com.shym.front_end.ProfileFragment"
+        android:label="profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
