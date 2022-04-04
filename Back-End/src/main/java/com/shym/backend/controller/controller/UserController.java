@@ -1,17 +1,16 @@
 package com.shym.backend.controller.controller;
 
+import com.shym.backend.dto.ClientPreferencesDTO;
 import com.shym.backend.dto.CreateAgencyDto;
 import com.shym.backend.dto.CreateClientDto;
+import com.shym.backend.dto.JwtLoginDto;
 import com.shym.backend.model.Agency;
 import com.shym.backend.model.Client;
 import com.shym.backend.service.AgencyService;
 import com.shym.backend.service.ClientService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/account")
@@ -37,6 +36,16 @@ public class UserController {
     public ResponseEntity<Agency> createAgency(@RequestBody CreateAgencyDto createAgencyDto) {
         return new ResponseEntity<>(
                 agencyService.createAgency(createAgencyDto),
+                HttpStatus.OK
+        );
+    }
+
+    @PostMapping("/add/preferences")
+    public ResponseEntity<Client> addPreferences(@RequestBody ClientPreferencesDTO clientPreferencesDTO,
+                                                 @RequestHeader("Authorization") String jwtToken) {
+        String email = JwtLoginDto.getEmailFromJwtToken(jwtToken);
+        return new ResponseEntity<>(
+                this.clientService.addPreferences(clientPreferencesDTO, email),
                 HttpStatus.OK
         );
     }

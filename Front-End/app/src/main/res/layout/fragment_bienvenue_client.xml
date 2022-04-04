@@ -35,19 +35,19 @@
         tools:layout_editor_absoluteX="16dp" />
 
     <Button
+        android:id="@+id/bienv_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginBottom="80dp"
         android:backgroundTint="@color/black"
         android:fontFamily="@font/sorabold"
         android:paddingHorizontal="20dp"
         android:paddingVertical="5dp"
         android:text="Next"
         android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bienvenueText" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/bienvenueText"

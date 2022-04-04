@@ -1,24 +1,21 @@
 package com.shym.front_end.ui.bienvenueClient;
 
-import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.shym.front_end.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ModelPreferenceFragment#newInstance} factory method to
+ * Use the {@link CatPreferenceFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ModelPreferenceFragment extends Fragment {
+public class CatPreferenceFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,7 +26,7 @@ public class ModelPreferenceFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ModelPreferenceFragment() {
+    public CatPreferenceFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +36,11 @@ public class ModelPreferenceFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ModelPreferenceFragment.
+     * @return A new instance of fragment CatPreferenceFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ModelPreferenceFragment newInstance(String param1, String param2) {
-        ModelPreferenceFragment fragment = new ModelPreferenceFragment();
+    public static CatPreferenceFragment newInstance(String param1, String param2) {
+        CatPreferenceFragment fragment = new CatPreferenceFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -60,18 +57,10 @@ public class ModelPreferenceFragment extends Fragment {
         }
     }
 
-    View view;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_model_preference, container, false);
-        /*Button model_pref_next;
-        model_pref_next = (Button) view.findViewById(R.id.model_pref_next);
-        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-        ButtonClickListener listener = new ButtonClickListener(getActivity(), fragmentManager);
-        model_pref_next.setOnClickListener(listener);*/
-        return view;
+        return inflater.inflate(R.layout.fragment_cat_preference, container, false);
     }
 }

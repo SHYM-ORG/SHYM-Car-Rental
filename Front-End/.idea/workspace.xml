@@ -18,18 +18,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7df66771-e5c7-4695-9a2c-9f07cc83ff1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueAgency/BienvenueAgencyFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_bienvenue_client.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bienvenue_client.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueClient/CatPreferenceFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/enter_from_right.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/exit_to_right.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_cat_preference.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueAgency/BienvenueAgencyActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueAgency/BienvenueAgencyActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueClient/BienvenueClientActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueClient/BienvenueClientActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueClient/BienvenueFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueClient/BienvenueClientFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueClient/BienvenueClientFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueClient/BienvenueClientFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueClient/ButtonClickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueClient/ButtonClickListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_bienvenue.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_bienvenue_agency.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bienvenue.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bienvenue_agency.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueClient/ModelPreferenceFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueClient/ModelPreferenceFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/back1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/logoshym.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bienvenue_client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bienvenue_client.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_model_preference.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_model_preference.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +67,7 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
-    <property name="memory.settings.postsync.last.time.stamp" value="1647874211481" />
+    <property name="memory.settings.postsync.last.time.stamp" value="1649089130410" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.572395827">
