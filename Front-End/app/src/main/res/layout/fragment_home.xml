@@ -6,9 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment"
     android:background="@color/cardview_dark_background"
->
+    >
 
+    <Button
+        android:id="@+id/bienvenueClient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="244dp"
+        android:text="Bienvenue Client"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
 
+    <Button
+        android:id="@+id/bienvenueAgence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bienvenue Agence"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bienvenueClient"
+        app:layout_constraintVertical_bias="0.084"
+        tools:layout_editor_absoluteX="0dp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,4 +38,5 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textSize="50dp"
         ></TextView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
