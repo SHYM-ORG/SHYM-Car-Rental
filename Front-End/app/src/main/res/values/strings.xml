@@ -5,7 +5,9 @@
     <string name="title_notifications">Notifications</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="don_t_have_">Dont have an account? Register now
-</string>
+    <string name="don_t_have_">Dont have an account? </string>
+    <string name="register"> <u> Register now </u> </string>
+    <string name="already_have_">Already have an account? </string>
+    <string name="login"> <u> Login </u> </string>
 
 </resources>

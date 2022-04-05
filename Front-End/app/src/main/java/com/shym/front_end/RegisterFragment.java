@@ -2,24 +2,16 @@ package com.shym.front_end;
 
 import android.content.Context;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ProfileFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class ProfileFragment extends Fragment {
+public class RegisterFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,7 +22,7 @@ public class ProfileFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ProfileFragment() {
+    public RegisterFragment() {
         // Required empty public constructor
     }
 
@@ -52,15 +44,6 @@ public class ProfileFragment extends Fragment {
         return fragment;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
     Context mContext;
 
     @Override
@@ -68,11 +51,11 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         mContext = getActivity();
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        return inflater.inflate(R.layout.fragment_register, container, false);
     }
 
-    public void goToRegister (View view) {
-        replaceFragement(new RegisterFragment());
+    public void goToLogin (View view) {
+        replaceFragement(new ProfileFragment());
     }
 
 
