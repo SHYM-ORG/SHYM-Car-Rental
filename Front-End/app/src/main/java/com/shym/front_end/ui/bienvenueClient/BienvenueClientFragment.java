@@ -3,10 +3,12 @@ package com.shym.front_end.ui.bienvenueClient;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.shym.front_end.R;
 
@@ -64,6 +66,13 @@ public class BienvenueClientFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view =  inflater.inflate(R.layout.fragment_bienvenue_client, container, false);
+        Button bienv_next = view.findViewById(R.id.bienv_client_next);
+        bienv_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.nav_to_model_prefs);
+            }
+        });
         return view;
     }
 }

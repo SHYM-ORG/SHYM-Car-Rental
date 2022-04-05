@@ -9,6 +9,7 @@
     >
 
     <ImageView
+        android:contentDescription="logo"
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -30,12 +31,12 @@
         android:text="Here you can find your favorite car for rent at nearby agencies, and have a geographic guid to help you find them"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="16dp"
+        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@+id/bienvenueText"
         tools:layout_editor_absoluteX="16dp" />
 
     <Button
-        android:id="@+id/bienv_next"
+        android:id="@+id/bienv_client_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="80dp"
@@ -44,7 +45,7 @@
         android:paddingHorizontal="20dp"
         android:paddingVertical="5dp"
         android:text="Next"
-        android:textSize="25dp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -56,10 +57,10 @@
         android:layout_marginTop="48dp"
         android:fontFamily="@font/sorabbold"
         android:letterSpacing=".2"
-        android:text="Bienvenue"
+        android:text="Hello"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         tools:layout_editor_absoluteX="0dp" />

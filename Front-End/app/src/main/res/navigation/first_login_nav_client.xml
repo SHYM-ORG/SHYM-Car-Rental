@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/first_login_nav"
+    app:startDestination="@id/bienvenueClientFragment2">
+    <fragment
+        android:id="@+id/bienvenueClientFragment2"
+        android:name="com.shym.front_end.ui.bienvenueClient.BienvenueClientFragment"
+        android:label="fragment_bienvenue_client"
+        tools:layout="@layout/fragment_bienvenue_client" >
+        <action
+            android:id="@+id/nav_to_model_prefs"
+            app:destination="@id/modelPreferenceFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/modelPreferenceFragment"
+        android:name="com.shym.front_end.ui.bienvenueClient.ModelPreferenceFragment"
+        android:label="fragment_model_preference"
+        tools:layout="@layout/fragment_model_preference" >
+        <action
+            android:id="@+id/nav_to_cat_prefs"
+            app:destination="@id/catPreferenceFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/catPreferenceFragment"
+        android:name="com.shym.front_end.ui.bienvenueClient.CatPreferenceFragment"
+        android:label="fragment_cat_preference"
+        tools:layout="@layout/fragment_cat_preference" />
+</navigation>

@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -67,11 +68,14 @@ public class ModelPreferenceFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_model_preference, container, false);
-        /*Button model_pref_next;
+        Button model_pref_next;
         model_pref_next = (Button) view.findViewById(R.id.model_pref_next);
-        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-        ButtonClickListener listener = new ButtonClickListener(getActivity(), fragmentManager);
-        model_pref_next.setOnClickListener(listener);*/
+        model_pref_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.nav_to_cat_prefs);
+            }
+        });
         return view;
     }
 }

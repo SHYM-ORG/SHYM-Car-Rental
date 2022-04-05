@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.shym.front_end.databinding.FragmentHomeBinding;
-import com.shym.front_end.ui.bienvenueClient.ButtonClickListener;
+import com.shym.front_end.ui.bienvenueClient.ClientButtonClickListener;
 
 public class HomeFragment extends Fragment {
 
@@ -28,7 +28,7 @@ public class HomeFragment extends Fragment {
         //final TextView textView = binding.textHome;
         final Button bienvClient = binding.bienvenueClient;
         final Button bienvAgence = binding.bienvenueAgence;
-        ButtonClickListener listener = new ButtonClickListener(this.getActivity());
+        ClientButtonClickListener listener = new ClientButtonClickListener(this.getActivity());
         bienvAgence.setOnClickListener(listener);
         bienvClient.setOnClickListener(listener);
         //homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);

@@ -6,11 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".ui.bienvenueAgency.BienvenueAgencyActivity">
 
-    <fragment
-        android:name="com.shym.front_end.ui.bienvenueClient.BienvenueClientFragment"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/bienvenueFragmentClient"
-        />
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/first_login_nav_client"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="309dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

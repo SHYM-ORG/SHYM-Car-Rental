@@ -12,7 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.shym.front_end.R;
 import com.shym.front_end.ui.bienvenueAgency.BienvenueAgencyActivity;
 
-public class ButtonClickListener implements View.OnClickListener {
+public class ClientButtonClickListener implements View.OnClickListener {
 
     Context context;
     /*FragmentManager fragmentManager;
@@ -22,7 +22,7 @@ public class ButtonClickListener implements View.OnClickListener {
         this.context = context;
         this.fragmentManager = fragmentManager;
     }*/
-    public ButtonClickListener (Context context) {
+    public ClientButtonClickListener(Context context) {
         this.context = context;
     }
     @Override
@@ -37,20 +37,6 @@ public class ButtonClickListener implements View.OnClickListener {
             case R.id.bienvenueClient: {
                 Intent intent = new Intent((Activity)context, BienvenueClientActivity.class);
                 context.startActivity(intent);
-                break;
-            }
-            case R.id.bienv_next: {
-                /*fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right);
-                fragmentTransaction.replace(R.id.bienvenueFragmentClient, new ModelPreferenceFragment());
-                fragmentTransaction.commit();*/
-                break;
-            }
-            case R.id.model_pref_next: {
-                /*fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right);
-                fragmentTransaction.replace(R.id.bienvenueFragmentClient, new CatPreferenceFragment());
-                fragmentTransaction.commit();*/
                 break;
             }
         }
