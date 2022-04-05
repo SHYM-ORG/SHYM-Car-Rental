@@ -24,21 +24,7 @@ public class WelcomeActivity extends AppCompatActivity {
         start= (Button) findViewById(R.id.bienvenueButton);
 
 
-        binding.bienvenueButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-
-                GoToRegister();
-            }
-        });
-
-
-    };
-
-    public void GoToRegister() {
-        Intent  intent=new Intent(this , RegisterActivity.class);
-        startActivity(intent);
 
     };
 }
