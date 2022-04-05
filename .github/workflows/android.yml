@@ -24,9 +24,7 @@ jobs:
     - name: Grant execute permission for gradlew
       working-directory: ./Front-End
       run: chmod +x gradlew
-    - name: Build with Gradle
-      working-directory: ./Front-End
-      run: ./Front-End/gradlew build
+   
     - name: Build APK
       working-directory: ./Front-End
       run: bash ./gradlew assembleDebug --stacktrace
