@@ -3,6 +3,7 @@ package com.shym.front_end;
 import android.content.Context;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -71,18 +72,6 @@ public class ProfileFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_profile, container, false);
     }
 
-    public void goToRegister (View view) {
-        replaceFragement(new RegisterFragment());
-    }
 
 
-
-
-    private void replaceFragement(Fragment fragment){
-        FragmentManager fragmentManager = ((FragmentActivity) mContext).getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame_layout,fragment);
-        fragmentTransaction.commit();
-
-    }
 }

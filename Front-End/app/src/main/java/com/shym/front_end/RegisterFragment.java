@@ -54,18 +54,7 @@ public class RegisterFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_register, container, false);
     }
 
-    public void goToLogin (View view) {
-        replaceFragement(new ProfileFragment());
-    }
 
 
 
-
-    private void replaceFragement(Fragment fragment){
-        FragmentManager fragmentManager = ((FragmentActivity) mContext).getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame_layout,fragment);
-        fragmentTransaction.commit();
-
-    }
 }

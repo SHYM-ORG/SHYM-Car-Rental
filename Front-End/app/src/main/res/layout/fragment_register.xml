@@ -121,7 +121,7 @@
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="350dp"
+                android:layout_marginTop="500dp"
                 android:backgroundTint="#F3F3F3"
                 android:text="REGISTER"
                 android:textColor="@color/black"

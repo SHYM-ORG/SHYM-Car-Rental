@@ -1,6 +1,7 @@
 package com.shym.front_end;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -39,14 +40,14 @@ public class MainActivity extends AppCompatActivity {
 switch(item.getItemId()){
 
     case  R.id.home:
-        replaceFragement(new HomeFragment());
+        replaceFragment(new HomeFragment());
         break;
     case  R.id.rental:
-        replaceFragement(new RentalFragment());
+        replaceFragment(new RentalFragment());
 
         break;
     case  R.id.profile:
-        replaceFragement(new ProfileFragment());
+        replaceFragment(new ProfileFragment());
 
         break;
 }
@@ -57,12 +58,20 @@ switch(item.getItemId()){
     }
 
 
-    private void replaceFragement(Fragment fragment){
+    private void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout,fragment);
         fragmentTransaction.commit();
 
     }
+
+    public void goToRegister(View view) {
+        replaceFragment(new RegisterFragment());
+    }
+    public void goToLogin (View view) {
+        replaceFragment(new ProfileFragment());
+    }
+
 
 }
