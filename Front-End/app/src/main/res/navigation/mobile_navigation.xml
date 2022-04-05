@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.shym.front_end.ui.home.HomeFragment"
+        android:name="com.shym.front_end.Fragments.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_rental"
-        android:name="com.shym.front_end.RentalFragment"
+        android:name="com.shym.front_end.Fragments.RentalFragment"
         android:label="rental"
         tools:layout="@layout/fragment_rental" />
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.shym.front_end.ProfileFragment"
+        android:name="com.shym.front_end.Fragments.ProfileFragment"
         android:label="profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

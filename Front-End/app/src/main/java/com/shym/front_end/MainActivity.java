@@ -4,19 +4,15 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
+import com.shym.front_end.Fragments.HomeFragment;
+import com.shym.front_end.Fragments.ProfileFragment;
+import com.shym.front_end.Fragments.RentalFragment;
 import com.shym.front_end.databinding.ActivityMainBinding;
-import com.shym.front_end.ui.home.HomeFragment;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -33,8 +29,11 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        replaceFragement(new HomeFragment());
 
         binding.navView.setOnItemSelectedListener(item ->{
+
+
 
 switch(item.getItemId()){
 

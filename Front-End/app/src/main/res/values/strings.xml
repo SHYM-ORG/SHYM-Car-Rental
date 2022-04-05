@@ -1,9 +1,13 @@
 <resources>
-    <string name="app_name">Front-End</string>
+    <string name="app_name">Rental App</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="don_t_have_">Register</string>
+    <string name="don_t_have_">Dont have an account?
+</string>
+    <string name="already_have_">Already have an account?
+</string>
+
 </resources>
