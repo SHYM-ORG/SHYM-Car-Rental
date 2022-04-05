@@ -21,7 +21,7 @@ jobs:
         cache: gradle
 
     - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+      run: chmod +x Front-End/gradlew
     - name: Build with Gradle
       run: Front-End/gradlew build
     - name: Build APK
