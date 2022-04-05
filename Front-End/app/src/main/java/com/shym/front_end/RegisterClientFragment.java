@@ -7,11 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-public class RegisterFragment extends Fragment {
+public class RegisterClientFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,7 +19,7 @@ public class RegisterFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public RegisterFragment() {
+    public RegisterClientFragment() {
         // Required empty public constructor
     }
 
@@ -51,10 +48,8 @@ public class RegisterFragment extends Fragment {
                              Bundle savedInstanceState) {
         mContext = getActivity();
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register, container, false);
+        return inflater.inflate(R.layout.fragment_register_client, container, false);
     }
-
-
 
 
 }
