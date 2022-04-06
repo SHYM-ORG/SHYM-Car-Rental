@@ -71,7 +71,7 @@ public class RegisterClientFragment extends Fragment {
                 data.put("lastName", lastName);
                 data.put("email", email);
                 data.put("password", password);
-                VolleyUtils.postData("https://shym-api.herokuapp.com/api/account/create/client", data, mContext);
+                VolleyUtils.signUpClient(data, mContext);
             }
         });
         return view;

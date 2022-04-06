@@ -98,7 +98,7 @@
 
 
                 <EditText
-                    android:id="@+id/editTextTextEmailAddress3"
+                    android:id="@+id/editTextEmail"
                     android:layout_width="385dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
@@ -115,7 +115,7 @@
         ]]>
 
                 <EditText
-                    android:id="@+id/editTextTextPassword3"
+                    android:id="@+id/editTextPassword"
                     android:layout_width="381dp"
                     android:layout_height="37dp"
                     android:layout_marginLeft="30dp"
@@ -126,21 +126,9 @@
                     android:hint="Password"
                     android:inputType="textPassword" />
 
-                <EditText
-                    android:id="@+id/editTextTextConfirmPassword3"
-                    android:layout_width="381dp"
-                    android:layout_height="37dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginRight="30dp"
-                    android:drawableLeft="@drawable/ic_baseline_lock_24"
-                    android:fontFamily="sans-serif-condensed-light"
-                    android:hint="Confirm Password"
-                    android:inputType="textPassword" />
-
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/register_agency_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

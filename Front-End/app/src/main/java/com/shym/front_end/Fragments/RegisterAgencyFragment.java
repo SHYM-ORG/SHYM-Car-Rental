@@ -4,11 +4,17 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.fragment.app.Fragment;
 
 import com.shym.front_end.Fragments.ProfileFragment;
 import com.shym.front_end.R;
+import com.shym.front_end.utils.VolleyUtils;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class RegisterAgencyFragment extends Fragment {
 
@@ -50,7 +56,28 @@ public class RegisterAgencyFragment extends Fragment {
                              Bundle savedInstanceState) {
         mContext = getActivity();
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register_agency, container, false);
+        View view = inflater.inflate(R.layout.fragment_register_client, container, false);
+        mContext = getActivity();
+        Button register = view.findViewById(R.id.register_agency_button);
+        System.out.println(register);
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String name = ((EditText)getActivity().findViewById(R.id.editTextName)).getText().toString();
+                String phone = ((EditText)getActivity().findViewById(R.id.editTextPhone)).getText().toString();
+                String description = ((EditText)getActivity().findViewById(R.id.editTextDescription)).getText().toString();
+                String email = ((EditText)getActivity().findViewById(R.id.editTextEmail)).getText().toString();
+                String password = ((EditText)getActivity().findViewById(R.id.editTextPassword)).getText().toString();
+                Map<String, String> data = new HashMap();
+                data.put("name", name);
+                data.put("phone", phone);
+                data.put("description", description);
+                data.put("email", email);
+                data.put("password", password);
+                VolleyUtils.signUpAgency(data, mContext);
+            }
+        });
+        return view;
     }
 
 }

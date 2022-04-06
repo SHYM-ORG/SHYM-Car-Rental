@@ -71,7 +71,6 @@ switch(item.getItemId()){
         fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_right);
         fragmentTransaction.replace(R.id.frame_layout,fragment);
         fragmentTransaction.commit();
-
     }
 
     public void goToRegisterClient(View view) {

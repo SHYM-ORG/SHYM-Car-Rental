@@ -76,7 +76,6 @@ public class ProfileFragment extends Fragment {
         System.out.println(token);
         if (!token.equals("null")) {
             View view = inflater.inflate(R.layout.fragment_profile, container, false);
-
             return view;
         } else {
             View view = inflater.inflate(R.layout.fragment_login, container, false);

@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/layout/activity_dummy.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.14920906370243694" />
+        <entry key="app/src/main/res/layout/activity_start.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/fragment_bienvenue_agency.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/fragment_bienvenue_client.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/fragment_cat_preference.xml" value="0.29243266353142366" />
@@ -21,6 +22,7 @@
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/fragment_register_agency.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/fragment_register_client.xml" value="0.14920906370243694" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.14920906370243694" />
       </map>
     </option>
   </component>
