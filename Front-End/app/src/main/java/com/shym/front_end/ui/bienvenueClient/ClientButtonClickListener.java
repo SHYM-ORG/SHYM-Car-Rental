@@ -30,6 +30,7 @@ public class ClientButtonClickListener implements View.OnClickListener {
 
         switch (view.getId()) {
             case  R.id.bienvenueAgence: {
+                System.out.println("ffjjfjfj");
                 Intent intent = new Intent((Activity)context, BienvenueAgencyActivity.class);
                 context.startActivity(intent);
                 break;

@@ -1,5 +1,7 @@
 package com.shym.front_end.Fragments;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +9,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+
 
 import com.shym.front_end.R;
+import com.shym.front_end.utils.VolleyUtils;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,10 +66,37 @@ public class ProfileFragment extends Fragment {
         }
     }
 
+    Context mContext;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        SharedPreferences sharedPref = getActivity().getSharedPreferences("auth", getActivity().MODE_PRIVATE);
+        String token = sharedPref.getString("token", null);
+        System.out.println(token);
+        if (!token.equals("null")) {
+            View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
+            return view;
+        } else {
+            View view = inflater.inflate(R.layout.fragment_login, container, false);
+            mContext = getActivity();
+            Button register = view.findViewById(R.id.login_button);
+            register.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    String email = ((EditText)getActivity().findViewById(R.id.email_login)).getText().toString();
+                    String password = ((EditText)getActivity().findViewById(R.id.password_login)).getText().toString();
+                    Map<String, String> data = new HashMap();
+                    data.put("email", email);
+                    data.put("password", password);
+                    VolleyUtils.logIn(data, mContext);
+                }
+            });
+            return view;
+        }
     }
+
+
+
 }

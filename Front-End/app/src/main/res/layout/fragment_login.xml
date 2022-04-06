@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.LoginFragment"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- TODO: Update blank fragment layout -->
+        <View
+            android:id="@+id/rectangle_5"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:alpha="0.99"
+            android:background="@drawable/rectangle_5" />
+
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="357dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/rental"
+            android:layout_marginLeft="100dp"
+            />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Welcome Back!"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="100dp"
+            android:text="LOGIN"
+            android:textColor="#9F0909"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/email_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginRight="30dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:hint="Email"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            /><![CDATA[
+            "
+            />
+
+        ]]>
+
+        <EditText
+            android:id="@+id/password_login"
+            android:layout_width="381dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="350dp"
+            android:layout_marginRight="30dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="891dp">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"><![CDATA["
+                android:text="Login" />
+
+            ]]>
+
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="350dp"
+                android:backgroundTint="#F3F3F3"
+                android:text="LOGIN"
+                android:textColor="@color/black"
+
+                />
+
+            <TextView
+                android:id="@+id/don_t_have_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="top"
+                android:text="@string/don_t_have_"
+                android:textAppearance="@style/don_t_have_" />
+
+            <TextView
+                android:id="@+id/registerClient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="top"
+                android:onClick="goToRegisterClient"
+                android:text="@string/registerClient"
+                android:textAppearance="@style/register" />
+
+            <TextView
+                android:id="@+id/registerAgency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="top"
+                android:onClick="goToRegisterAgency"
+                android:text="@string/registerAgency"
+                android:textAppearance="@style/register" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>

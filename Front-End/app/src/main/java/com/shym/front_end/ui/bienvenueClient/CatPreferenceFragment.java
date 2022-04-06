@@ -1,5 +1,6 @@
 package com.shym.front_end.ui.bienvenueClient;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.shym.front_end.MainActivity;
 import com.shym.front_end.R;
+import com.shym.front_end.ui.bienvenueAgency.BienvenueAgencyActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,6 +65,14 @@ public class CatPreferenceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cat_preference, container, false);
+        View view =  inflater.inflate(R.layout.fragment_cat_preference, container, false);
+        Button finish = view.findViewById(R.id.cat_pref_finish);
+        finish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().finish();
+            }
+        });
+        return view;
     }
 }
