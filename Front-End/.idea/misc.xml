@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/PC/Desktop/ProjetAndroid/SHYM-Car-Rental/Front-End/app/src/main/res/drawable/rectangle_2.xml" value="0.1" />
+        <entry key="..\:/Users/PC/Desktop/ProjetAndroid/SHYM-Car-Rental/Front-End/app/src/main/res/drawable/rectangle_5.xml" value="0.2405" />
+        <entry key="..\:/Users/PC/Desktop/ProjetAndroid/SHYM-Car-Rental/Front-End/app/src/main/res/layout/activity_main.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/PC/Desktop/ProjetAndroid/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_home.xml" value="0.4" />
+        <entry key="..\:/Users/PC/Desktop/ProjetAndroid/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_profile.xml" value="0.10089781958101753" />
         <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1245" />
         <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/drawable/button_shap.xml" value="0.185" />
         <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.102" />

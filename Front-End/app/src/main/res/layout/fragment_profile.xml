@@ -119,6 +119,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="top"
+                android:linksClickable="true"
                 android:text="@string/don_t_have_"
                 android:textAppearance="@style/don_t_have_" />
 
