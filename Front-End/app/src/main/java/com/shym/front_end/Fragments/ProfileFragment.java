@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 
 import com.shym.front_end.R;
@@ -71,6 +72,7 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        ProgressBar progressBar;
         SharedPreferences sharedPref = getActivity().getSharedPreferences("auth", getActivity().MODE_PRIVATE);
         String token = sharedPref.getString("token", null);
         System.out.println(token);
@@ -79,6 +81,8 @@ public class ProfileFragment extends Fragment {
             return view;
         } else {
             View view = inflater.inflate(R.layout.fragment_login, container, false);
+            progressBar = (ProgressBar) view.findViewById(R.id.progressbar);
+            progressBar.setVisibility(View.INVISIBLE);
             mContext = getActivity();
             Button register = view.findViewById(R.id.login_button);
             register.setOnClickListener(new View.OnClickListener() {
@@ -89,7 +93,7 @@ public class ProfileFragment extends Fragment {
                     Map<String, String> data = new HashMap();
                     data.put("email", email);
                     data.put("password", password);
-                    VolleyUtils.logIn(data, mContext);
+                    VolleyUtils.logIn(data, mContext, progressBar);
                 }
             });
             return view;

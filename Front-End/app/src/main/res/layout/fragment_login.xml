@@ -145,6 +145,17 @@
 
         </LinearLayout>
 
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:indeterminate="true"
+            android:max="100"
+            android:backgroundTint="@color/white"
+            android:layout_below="@+id/LinearLayout1"
+            android:indeterminateTint="#1a09d6"
+            android:layout_marginTop="-300dp"/>
+
 
     </RelativeLayout>
 </FrameLayout>

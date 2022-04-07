@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 import androidx.fragment.app.Fragment;
 
@@ -58,7 +59,9 @@ public class RegisterClientFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_register_client, container, false);
         mContext = getActivity();
         Button register = view.findViewById(R.id.register_client_button);
-        System.out.println(register);
+        ProgressBar progressBar;
+        progressBar = (ProgressBar) view.findViewById(R.id.progressbar);
+        progressBar.setVisibility(View.INVISIBLE);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,7 +74,7 @@ public class RegisterClientFragment extends Fragment {
                 data.put("lastName", lastName);
                 data.put("email", email);
                 data.put("password", password);
-                VolleyUtils.signUpClient(data, mContext);
+                VolleyUtils.signUpClient(data, mContext, progressBar);
             }
         });
         return view;

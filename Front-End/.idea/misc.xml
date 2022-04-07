@@ -3,29 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/PC/Desktop/ProjetAndroid/SHYM-Car-Rental/Front-End/app/src/main/res/drawable/rectangle_2.xml" value="0.1" />
-        <entry key="..\:/Users/PC/Desktop/ProjetAndroid/SHYM-Car-Rental/Front-End/app/src/main/res/drawable/rectangle_5.xml" value="0.2405" />
-        <entry key="..\:/Users/PC/Desktop/ProjetAndroid/SHYM-Car-Rental/Front-End/app/src/main/res/layout/activity_main.xml" value="0.20863616930312098" />
-        <entry key="..\:/Users/PC/Desktop/ProjetAndroid/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_home.xml" value="0.4" />
-        <entry key="..\:/Users/PC/Desktop/ProjetAndroid/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_profile.xml" value="0.10089781958101753" />
-        <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1245" />
-        <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/drawable/button_shap.xml" value="0.185" />
-        <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.102" />
-        <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1215" />
-        <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1245" />
-        <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1245" />
-        <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1245" />
-        <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/drawable/rectangle_5.xml" value="0.1315" />
-        <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
-        <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_home.xml" value="0.1" />
-        <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_home2.xml" value="0.1140625" />
-        <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_notifications.xml" value="0.11770833333333333" />
-        <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
-        <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_rental.xml" value="0.1140625" />
-        <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
-        <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1215" />
-        <entry key="..\:/Users/PC/SHYM-Car-Rental/Front-End/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.102" />
         <entry key="app/src/main/res/drawable/gradiant_background.xml" value="0.2845" />
         <entry key="app/src/main/res/layout/activity_bienvenue.xml" value="0.6336949585194639" />
         <entry key="app/src/main/res/layout/activity_bienvenue_agency.xml" value="0.14920906370243694" />
@@ -39,12 +16,13 @@
         <entry key="app/src/main/res/layout/fragment_cat_preference.xml" value="0.29243266353142366" />
         <entry key="app/src/main/res/layout/fragment_category_preference.xml" value="0.3411458333333333" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.14920906370243694" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.41349206349206347" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/fragment_model_preference.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/fragment_register_agency.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/fragment_register_client.xml" value="0.14920906370243694" />
+        <entry key="app/src/main/res/layout/fragment_rental.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.14920906370243694" />
       </map>
     </option>
