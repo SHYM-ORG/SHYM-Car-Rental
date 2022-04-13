@@ -3,6 +3,7 @@ package com.shym.backend.model;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class RentalOffer {
@@ -16,6 +17,7 @@ public class RentalOffer {
      * the price of renting the car for one day
      */
     @Column(name = "pricePerDay")
+    @NotNull(message = "car's price per day must be provided")
     private int pricePerDay;
 
     /***
@@ -24,6 +26,13 @@ public class RentalOffer {
 
     @Column(name = "description")
     private String description;
+
+    /***
+     * is the car available for rent right now or not
+     */
+    @Column(name = "availableNow")
+    @NotNull
+    private boolean availableNow;
 
     /***
      * the id of the car concerned by this offer
@@ -84,5 +93,13 @@ public class RentalOffer {
 
     public void setAgency(Agency agency) {
         this.agency = agency;
+    }
+
+    public boolean isAvailableNow() {
+        return availableNow;
+    }
+
+    public void setAvailableNow(boolean availableNow) {
+        this.availableNow = availableNow;
     }
 }

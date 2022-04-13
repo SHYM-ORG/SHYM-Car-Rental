@@ -1,11 +1,13 @@
 package com.shym.backend.model;
 
+import com.shym.backend.enumeration.CarCategory;
 import com.shym.backend.enumeration.CarModel;
 import com.shym.backend.enumeration.Color;
 import com.shym.backend.enumeration.FuelType;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Car {
@@ -20,6 +22,7 @@ public class Car {
      */
     @Column(name = "model")
     @Enumerated(EnumType.STRING)
+    @NotNull(message = "car's model must be provided")
     private CarModel model;
 
     /***
@@ -28,7 +31,8 @@ public class Car {
 
     @Column(name = "category")
     @Enumerated(EnumType.STRING)
-    private CarModel category;
+    @NotNull(message = "car's category must be provided")
+    private CarCategory category;
 
     /***
      * the color of the car
@@ -43,6 +47,7 @@ public class Car {
      */
 
     @Column(name = "series")
+    @NotNull(message = "car's series must be provided")
     private String series;
 
     /***
@@ -54,19 +59,27 @@ public class Car {
     private FuelType fuelType;
 
     /***
-     * the consummation rate of the car in liters per 100 kilometer
+     * the consumption rate of the car in the city (in liters per 100 kilometer)
      */
 
-    @Column(name = "consummationRate")
-    private float consummationRate;
+    @Column(name = "consumptionRateCity")
+    private float consumptionRateCity;
 
-    public Car(CarModel model, CarModel category, Color color, String series, FuelType fuelType, float consummationRate) {
+    /***
+     * the consumption rate of the car in the Highway (in liters per 100 kilometer)
+     */
+
+    @Column(name = "consumptionRateHighway")
+    private float consumptionRateHighway;
+
+    public Car(CarModel model, CarCategory category, Color color, String series, FuelType fuelType, float consumptionRateCity, float consumptionRateHighway) {
         this.model = model;
         this.category = category;
         this.color = color;
         this.series = series;
         this.fuelType = fuelType;
-        this.consummationRate = consummationRate;
+        this.consumptionRateCity = consumptionRateCity;
+        this.consumptionRateHighway = consumptionRateHighway;
     }
 
     public Car() {}
@@ -83,11 +96,11 @@ public class Car {
         this.model = model;
     }
 
-    public CarModel getCategory() {
+    public CarCategory getCategory() {
         return category;
     }
 
-    public void setCategory(CarModel category) {
+    public void setCategory(CarCategory category) {
         this.category = category;
     }
 
@@ -115,11 +128,19 @@ public class Car {
         this.fuelType = fuelType;
     }
 
-    public float getConsummationRate() {
-        return consummationRate;
+    public float getConsumptionRateCity() {
+        return consumptionRateCity;
     }
 
-    public void setConsummationRate(float consummationRate) {
-        this.consummationRate = consummationRate;
+    public void setConsumptionRateCity(float consummationRate) {
+        this.consumptionRateCity = consummationRate;
+    }
+
+    public float getConsumptionRateHighway() {
+        return consumptionRateHighway;
+    }
+
+    public void setConsumptionRateHighway(float consumptionRateHighway) {
+        this.consumptionRateHighway = consumptionRateHighway;
     }
 }
