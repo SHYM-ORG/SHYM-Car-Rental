@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.shym.front_end.R;
 
@@ -60,6 +62,14 @@ public class BienvenueAgencyFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bienvenue_agency, container, false);
+        View view = inflater.inflate(R.layout.fragment_bienvenue_agency, container, false);
+        Button bienv_next = view.findViewById(R.id.bienv_agency_next);
+        bienv_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.agency_welcom_to_location);
+            }
+        });
+        return view;
     }
 }

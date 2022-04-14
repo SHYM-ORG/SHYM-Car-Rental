@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/first_login_nav"
+    app:startDestination="@id/bienvenueAgencyFragment">
+    <fragment
+        android:id="@+id/bienvenueAgencyFragment"
+        android:name="com.shym.front_end.ui.bienvenueAgency.BienvenueAgencyFragment"
+        android:label="fragment_bienvenue_agency"
+        tools:layout="@layout/fragment_bienvenue_agency" >
+        <action
+            android:id="@+id/agency_welcom_to_location"
+            app:destination="@id/agencyLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/agencyLocationFragment"
+        android:name="com.shym.front_end.ui.bienvenueAgency.AgencyLocationFragment"
+        android:label="fragment_agency_location"
+        tools:layout="@layout/fragment_agency_location" />
+</navigation>

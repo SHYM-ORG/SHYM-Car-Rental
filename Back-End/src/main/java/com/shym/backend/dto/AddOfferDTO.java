@@ -10,7 +10,7 @@ public record AddOfferDTO(
     CarCategory category,
     Color color,
     String series,
-    FuelType fuelType,
+    FuelType fuelType, //
     float consumptionRateCity,
     float consumptionRateHighway,
     int pricePerDay,
