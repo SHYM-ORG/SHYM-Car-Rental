@@ -13,14 +13,4 @@
         android:id="@+id/bienvenueFragmentAgency"
         />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView2"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/first_login_nav_agency"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="229dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
