@@ -2,18 +2,37 @@ package com.shym.front_end.models;
 
 
 public class Car {
-    private String name;
-    private int image;
-    public String getName() {
-        return name;
+    private String place;
+    private String model;
+    private String image;
+
+    public Car(String place, String model, String image) {
+        this.place = place;
+        this.model = model;
+        this.image = image;
     }
-    public void setName(String name) {
-        this.name = name;
+
+    public String getPlace() {
+        return place;
     }
-    public int getImage() {
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+
+    public String getImage() {
         return image;
     }
-    public void setImage(int image_drawable) {
+    public void setImage(String image_drawable) {
         this.image = image_drawable;
     }
 }

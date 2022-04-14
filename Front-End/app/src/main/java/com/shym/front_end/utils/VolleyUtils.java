@@ -1,6 +1,8 @@
 package com.shym.front_end.utils;
 
+import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -23,7 +25,6 @@ import com.android.volley.toolbox.Volley;
 import com.shym.front_end.Fragments.HomeFragment;
 import com.shym.front_end.R;
 import com.shym.front_end.ui.bienvenueAgency.BienvenueAgencyActivity;
-import com.shym.front_end.ui.bienvenueAgency.BienvenueAgencyFragment;
 import com.shym.front_end.ui.bienvenueClient.BienvenueClientActivity;
 
 import org.json.JSONObject;
@@ -48,16 +49,8 @@ public class VolleyUtils {
                             ed.commit();
                         } catch (Exception e){}
                         replaceFragment(new HomeFragment(), (AppCompatActivity) mContext);
-                        try{
-                            String role = response.getString("role");
-                            Intent intent;
-                            if (role.equals("AGENCY")) {
-                                intent = new Intent(mContext, BienvenueAgencyActivity.class);
-                            } else {
-                                intent = new Intent(mContext, BienvenueClientActivity.class);
-                            }
-                            mContext.startActivity(intent);
-                        } catch (Exception e){}
+                        Intent intent = new Intent(mContext, BienvenueClientActivity.class);
+                        mContext.startActivity(intent);
                     }
                 },
                 new Response.ErrorListener() {
