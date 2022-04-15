@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/gradiant_background.xml" value="0.2845" />
+        <entry key="app/src/main/res/drawable/rectangle_2.xml" value="0.284" />
         <entry key="app/src/main/res/layout/activity_bienvenue.xml" value="0.6336949585194639" />
         <entry key="app/src/main/res/layout/activity_bienvenue_agency.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/activity_bienvenue_client.xml" value="0.14920906370243694" />
@@ -19,7 +20,7 @@
         <entry key="app/src/main/res/layout/fragment_cat_preference.xml" value="0.29243266353142366" />
         <entry key="app/src/main/res/layout/fragment_category_preference.xml" value="0.3411458333333333" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.14920906370243694" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.41349206349206347" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/fragment_model_preference.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.14920906370243694" />

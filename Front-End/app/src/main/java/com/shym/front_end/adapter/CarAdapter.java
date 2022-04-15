@@ -11,10 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.shym.front_end.models.Car;
 import com.shym.front_end.R;
-
-
+import com.shym.front_end.models.Car;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

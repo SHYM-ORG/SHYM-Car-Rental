@@ -18,14 +18,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7df66771-e5c7-4695-9a2c-9f07cc83ff1d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/controller/controller/RentalOfferController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/controller/controller/RentalOfferController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/controller/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/controller/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/model/RentalOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/model/RentalOffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/repository/RentalOfferRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/repository/RentalOfferRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/service/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/service/RentalOfferService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/service/RentalOfferService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/adapter/CarAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/adapter/CarAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/rectangle_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rectangle_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +79,7 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/navigation" />
-    <property name="memory.settings.postsync.last.time.stamp" value="1649892159273" />
+    <property name="memory.settings.postsync.last.time.stamp" value="1650003883871" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.572395827">
