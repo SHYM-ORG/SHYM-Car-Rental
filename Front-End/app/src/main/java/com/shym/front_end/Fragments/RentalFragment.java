@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.shym.front_end.R;
@@ -41,7 +42,9 @@ public class RentalFragment extends Fragment {
         View root = binding.getRoot();
 
         recyclerViewCars = binding.recyclerCar;
-
+        ProgressBar progressBar;
+        progressBar = binding.progressbar;
+        progressBar.setVisibility(View.INVISIBLE);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
         recyclerViewCars.setHasFixedSize(true);
         linearLayoutManager.setStackFromEnd(true);
@@ -52,7 +55,7 @@ public class RentalFragment extends Fragment {
         carAdapter = new CarAdapter(getContext(), carList);
         recyclerViewCars.setAdapter(carAdapter);
 
-        VolleyUtils.readCars("https://fakestoreapi.com/products/",getContext(),carAdapter,carList);
+        VolleyUtils.readCars("https://fakestoreapi.com/products/",getContext(),carAdapter,carList,progressBar);
 
 
 

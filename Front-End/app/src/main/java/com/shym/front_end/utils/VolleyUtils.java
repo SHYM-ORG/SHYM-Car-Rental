@@ -41,9 +41,10 @@ import java.util.Map;
 public class VolleyUtils {
 
 
-    public static  void readCars(String Url,Context context , CarAdapter carAdapter,ArrayList<Car> carList) {
+    public static  void readCars(String Url,Context context , CarAdapter carAdapter,ArrayList<Car> carList,ProgressBar progressBar) {
 
         Toast.makeText(context, "testst", Toast.LENGTH_SHORT).show();
+        progressBar.setVisibility(View.VISIBLE);
 
         String url = Url;
         RequestQueue queue = Volley.newRequestQueue(context);
@@ -54,6 +55,7 @@ public class VolleyUtils {
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
+                progressBar.setVisibility(View.INVISIBLE);
                 //progressBar.setVisibility(View.GONE);
                 //courseRV.setVisibility(View.VISIBLE);
                 for (int i = 0; i < response.length(); i++) {
@@ -79,6 +81,8 @@ public class VolleyUtils {
 
                         //  buildRecyclerView();
                     } catch (JSONException e) {
+                        progressBar.setVisibility(View.INVISIBLE);
+                        ShowPopUp(context, "ERRROR", e.toString());
                         e.printStackTrace();
 
                     }
@@ -93,6 +97,8 @@ public class VolleyUtils {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                progressBar.setVisibility(View.INVISIBLE);
+                ShowPopUp(context, "ERRROR", error.getMessage());
 
             }
         });

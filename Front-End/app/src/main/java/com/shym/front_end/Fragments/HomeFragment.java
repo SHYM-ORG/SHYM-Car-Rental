@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -47,6 +49,8 @@ public class HomeFragment extends Fragment {
 
     private TextView textview;
 
+
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -55,6 +59,9 @@ public class HomeFragment extends Fragment {
 
         recyclerViewCars = binding.recyclerCar;
         textview=binding.textView;
+        ProgressBar progressBar;
+        progressBar = binding.progressbar;
+        progressBar.setVisibility(View.INVISIBLE);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
         recyclerViewCars.setHasFixedSize(true);
         linearLayoutManager.setStackFromEnd(true);
@@ -65,13 +72,14 @@ public class HomeFragment extends Fragment {
         carAdapter = new CarAdapter(getContext(), carList);
         recyclerViewCars.setAdapter(carAdapter);
 
-        VolleyUtils.readCars("https://fakestoreapi.com/products/",getContext(),carAdapter,carList);
+        VolleyUtils.readCars("https://fakestoreapi.com/products",getContext(),carAdapter,carList,progressBar);
 
 
 
 
         return root;
     }
+
 
     @Override
     public void onDestroyView() {
