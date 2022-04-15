@@ -3,10 +3,14 @@ package com.shym.backend.service;
 import com.shym.backend.dto.AddOfferDTO;
 import com.shym.backend.dto.JwtLoginDto;
 import com.shym.backend.dtoMappers.OfferDtoMapper;
+import com.shym.backend.exception.AgencyNotOwnerOfOfferException;
+import com.shym.backend.exception.RentalOfferAlreadyExistsException;
 import com.shym.backend.model.Agency;
 import com.shym.backend.model.RentalOffer;
 import com.shym.backend.repository.RentalOfferRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class RentalOfferService {
@@ -30,5 +34,20 @@ public class RentalOfferService {
         rentalOffer.setAgency(agency);
         rentalOffer.setCar(carService.addCar(rentalOffer.getCar()));
         return rentalOfferRepository.save(rentalOffer);
+    }
+
+    public void deleteOffer(String offerId, String jwtToken) {
+        String email = JwtLoginDto.getEmailFromJwtToken(jwtToken);
+        Agency agency = agencyService.getAgencyWithEmail(email);
+        RentalOffer rentalOffer = rentalOfferRepository.findById(offerId).orElseThrow(() -> new RentalOfferAlreadyExistsException("Offer already exists!"));
+        if (!rentalOffer.getAgency().getId().equals(agency.getId())) throw new AgencyNotOwnerOfOfferException("this offer is not owned by the agency!");
+        rentalOfferRepository.delete(rentalOffer);
+    }
+
+    public List<RentalOffer> getAgencyOffers(String jwtToken) {
+        String email = JwtLoginDto.getEmailFromJwtToken(jwtToken);
+        Agency agency = agencyService.getAgencyWithEmail(email);
+        List<RentalOffer> rentalOffers = rentalOfferRepository.findRentalOfferByAgency(agency);
+        return rentalOffers;
     }
 }

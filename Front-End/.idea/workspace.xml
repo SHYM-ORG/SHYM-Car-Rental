@@ -18,21 +18,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7df66771-e5c7-4695-9a2c-9f07cc83ff1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/navigation/first_login_nav_agency.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/dto/AddOfferDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/dto/AddOfferDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/service/CarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/controller/controller/RentalOfferController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/controller/controller/RentalOfferController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/controller/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/controller/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/model/RentalOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/model/RentalOffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/repository/RentalOfferRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/repository/RentalOfferRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/service/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/service/RentalOfferService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/service/RentalOfferService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back-End/src/main/java/com/shym/backend/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueAgency/AgencyLocationFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueAgency/AgencyLocationFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueAgency/BienvenueAgencyActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueAgency/BienvenueAgencyActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueAgency/BienvenueAgencyFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/ui/bienvenueAgency/BienvenueAgencyFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/utils/VolleyUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/shym/front_end/utils/VolleyUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_bienvenue_agency.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_bienvenue_agency.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_agency_location.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_agency_location.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bienvenue_agency.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bienvenue_agency.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

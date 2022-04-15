@@ -50,6 +50,8 @@ public class RentalOffer {
     @JoinColumn(name = "AgencyId")
     private Agency agency;
 
+    private String image;
+
     public RentalOffer(int pricePerDay, String description, Car car, Agency agency) {
         this.pricePerDay = pricePerDay;
         this.description = description;
