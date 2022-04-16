@@ -5,12 +5,12 @@
     xmlns:android = "http://schemas.android.com/apk/res/android" >
 
     <gradient
-        android:startColor = "#F0C6C6"
-        android:centerColor = "#C64242"
-        android:endColor = "#F0C6C6"
-        android:startX="99.25"
-        android:startY="46"
-        android:endX="297.75"
+        android:startColor = "#B8B8B8"
+        android:centerColor = "#4F4F4F"
+        android:endColor = "#B8B8B8"
+        android:startX="90"
+        android:startY="0"
+        android:endX="454.75"
         android:endY="46"
        android:type = "linear"
 

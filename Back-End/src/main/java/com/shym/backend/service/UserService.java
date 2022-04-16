@@ -13,8 +13,8 @@ public class UserService<T extends User>{
         this.userRepository = userRepository;
     }
 
-    public User getUserWithEmail(String email) throws Throwable {
-        return (User) userRepository.findByEmail(email).orElseThrow(() ->new RuntimeException("jkdfj"));
+    public T getUserWithEmail(String email) throws Throwable {
+        return (T) userRepository.findByEmail(email).orElseThrow(() ->new RuntimeException("User not found"));
     }
 
     public User updateUser(User user) {

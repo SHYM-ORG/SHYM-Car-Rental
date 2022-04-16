@@ -79,7 +79,8 @@
             tools:layout_editor_absoluteX="0dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
 
 
         </LinearLayout>
@@ -201,7 +202,7 @@
                         android:id="@+id/textView7"
                         android:layout_width="wrap_content"
                         android:layout_height="28dp"
-                        android:layout_alignStart="@+id/textView7"
+
                         android:layout_alignParentEnd="true"
                         android:layout_marginStart="0dp"
                         android:layout_marginEnd="20dp"
@@ -396,5 +397,21 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="@color/white"
+        android:indeterminate="true"
+        android:indeterminateTint="#1a09d6"
+        android:max="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rep" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
