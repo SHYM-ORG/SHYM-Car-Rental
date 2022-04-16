@@ -66,6 +66,7 @@
                     android:textColor="#FFC1C1"/>
 
                 <EditText
+                    android:id="@+id/contactus_email_text"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
@@ -76,6 +77,7 @@
                     android:inputType="textEmailAddress" />
 
                 <EditText
+                    android:id="@+id/contactus_message_text"
                     android:layout_width="fill_parent"
                     android:layout_height="150dp"
                     android:layout_marginBottom="10dp"
@@ -105,7 +107,6 @@
             </LinearLayout>
 
         </ScrollView>
-
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

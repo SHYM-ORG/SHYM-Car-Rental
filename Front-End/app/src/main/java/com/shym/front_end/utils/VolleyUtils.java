@@ -25,6 +25,7 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.shym.front_end.Fragments.HomeFragment;
+import com.shym.front_end.Fragments.ProfileFragment;
 import com.shym.front_end.R;
 import com.shym.front_end.adapter.CarAdapter;
 import com.shym.front_end.models.Car;
@@ -199,5 +200,28 @@ public class VolleyUtils {
         alertDialog.show();
     }
 
+    public static void sendMessage(Map data, Context mContext) {
+        RequestQueue requestQueue = Volley.newRequestQueue(mContext);
+        JSONObject dataJson = new JSONObject(data);
+
+        JsonObjectRequest jsonobj = new JsonObjectRequest(Request.Method.POST, "127.0.0.1:8000/contactUs/", dataJson,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Toast.makeText(mContext, "Message Sent Successfully!", Toast.LENGTH_SHORT).show();
+                        replaceFragment(new ProfileFragment(),(AppCompatActivity) mContext);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        ShowPopUp(mContext, "Error", "Try later...");
+                    }
+                }
+        ){
+            //here I want to post data to sever
+        };
+        requestQueue.add(jsonobj);
+    }
 
 }

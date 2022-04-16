@@ -65,8 +65,12 @@ public class ContactUsFragment extends Fragment {
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(mContext, "Message Sent Successfully!", Toast.LENGTH_SHORT).show();
-                replaceFragment(new ProfileFragment(),(AppCompatActivity) mContext);
+                String email = ((EditText)getActivity().findViewById(R.id.contactus_email_text)).getText().toString();
+                String message = ((EditText)getActivity().findViewById(R.id.contactus_message_text)).getText().toString();
+                Map<String, String> data = new HashMap();
+                data.put("email", email);
+                data.put("message", message);
+                VolleyUtils.sendMessage(data, mContext);
             }
         });
         return view;
