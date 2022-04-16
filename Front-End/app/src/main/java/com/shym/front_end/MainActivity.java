@@ -17,6 +17,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.shym.front_end.Fragments.ContactUsFragment;
 import com.shym.front_end.Fragments.HomeFragment;
 import com.shym.front_end.Fragments.ProfileFragment;
 import com.shym.front_end.Fragments.RegisterAgencyFragment;
@@ -84,6 +85,7 @@ switch(item.getItemId()){
     public void goToLogin (View view) {
         replaceFragment(new ProfileFragment());
     }
+    public void goToContactUs(View view) { replaceFragment(new ContactUsFragment()); }
 
 
 }

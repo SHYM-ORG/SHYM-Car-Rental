@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_contact_us.xml" value="0.176" />
+        <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_login.xml" value="0.20521590423257802" />
+        <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_model_preference.xml" value="0.1911073108165883" />
+        <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_profile.xml" value="0.128" />
+        <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_register_client.xml" value="0.1911073108165883" />
         <entry key="app/src/main/res/drawable/gradiant_background.xml" value="0.2845" />
         <entry key="app/src/main/res/layout/activity_bienvenue.xml" value="0.6336949585194639" />
         <entry key="app/src/main/res/layout/activity_bienvenue_agency.xml" value="0.14920906370243694" />

@@ -118,6 +118,7 @@
                     android:inputType="textPassword" />
 
 
+
                 <Button
                     android:id="@+id/register_client_button"
                     android:layout_width="wrap_content"

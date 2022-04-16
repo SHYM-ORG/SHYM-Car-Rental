@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:src="@drawable/rental"
+            android:layout_marginLeft="0dp"
+            />
+
+        <TextView
+            android:id="@+id/contact_form_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:text="We'd love to hear from you!!"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:typeface="serif" />
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/LinearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CheckBox android:id="@+id/checkbox1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I have a certain problem..."
+                    android:textColor="#FFC1C1" />
+
+                <CheckBox android:id="@+id/checkbox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I have a suggestion for you.."
+                    android:textColor="#FFC1C1"/>
+
+                <CheckBox android:id="@+id/checkbox3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I have a question..."
+                    android:textColor="#FFC1C1"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:hint="Email..."
+                    android:textColorHint="#E09A95"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:gravity="top"
+                    android:hint="Put Your Message Here..."
+                    android:textColorHint="#E09A95"
+                    android:fitsSystemWindows="true"
+                    android:breakStrategy="balanced"
+                    android:inputType="textMultiLine"
+                    android:singleLine="false"
+                    android:padding="5dp" />
+
+                <Button
+                    android:id="@+id/contact_us_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/colorPrimaryDark"
+                    android:elevation="4dp"
+                    android:paddingLeft="70dp"
+                    android:paddingRight="70dp"
+                    android:text="Send"
+                    android:textColor="#fff" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
