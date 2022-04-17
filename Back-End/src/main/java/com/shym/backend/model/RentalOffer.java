@@ -50,7 +50,7 @@ public class RentalOffer {
     @JoinColumn(name = "AgencyId")
     private Agency agency;
 
-    private String image;
+    private String imagePath;
 
     public RentalOffer(int pricePerDay, String description, Car car, Agency agency) {
         this.pricePerDay = pricePerDay;
@@ -103,5 +103,13 @@ public class RentalOffer {
 
     public void setAvailableNow(boolean availableNow) {
         this.availableNow = availableNow;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 }

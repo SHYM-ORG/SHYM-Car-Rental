@@ -1,9 +1,6 @@
 package com.shym.backend.controller.controller;
 
-import com.shym.backend.dto.ClientPreferencesDTO;
-import com.shym.backend.dto.CreateAgencyDto;
-import com.shym.backend.dto.CreateClientDto;
-import com.shym.backend.dto.JwtLoginDto;
+import com.shym.backend.dto.*;
 import com.shym.backend.model.Agency;
 import com.shym.backend.model.Client;
 import com.shym.backend.model.User;
@@ -41,6 +38,16 @@ public class UserController {
     public ResponseEntity<Agency> createAgency(@RequestBody CreateAgencyDto createAgencyDto) {
         return new ResponseEntity<>(
                 agencyService.createAgency(createAgencyDto),
+                HttpStatus.OK
+        );
+    }
+
+    @PostMapping("/addImage/agency")
+    public ResponseEntity<Agency> AddAgencyImage(@RequestBody AgencyImageDto agencyImageDto,
+                                                 @RequestHeader("Authorization") String jwtToken) {
+        String email = JwtLoginDto.getEmailFromJwtToken(jwtToken);
+        return new ResponseEntity<>(
+                agencyService.addAgencyImage(agencyImageDto.image(), email),
                 HttpStatus.OK
         );
     }

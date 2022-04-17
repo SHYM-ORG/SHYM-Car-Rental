@@ -8,24 +8,21 @@ import com.shym.backend.exception.RentalOfferAlreadyExistsException;
 import com.shym.backend.model.Agency;
 import com.shym.backend.model.RentalOffer;
 import com.shym.backend.repository.RentalOfferRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class RentalOfferService {
 
     private RentalOfferRepository rentalOfferRepository;
     private AgencyService agencyService;
     private CarService carService;
-
-    public RentalOfferService(RentalOfferRepository rentalOfferRepository,
-                              AgencyService agencyService,
-                              CarService carService) {
-        this.rentalOfferRepository = rentalOfferRepository;
-        this.agencyService = agencyService;
-        this.carService = carService;
-    }
+    private FileService fileService;
 
     public RentalOffer addOffer(AddOfferDTO dto, String jwtToken) {
         String email = JwtLoginDto.getEmailFromJwtToken(jwtToken);
@@ -33,6 +30,13 @@ public class RentalOfferService {
         RentalOffer rentalOffer = OfferDtoMapper.addOfferDtoMapper(dto);
         rentalOffer.setAgency(agency);
         rentalOffer.setCar(carService.addCar(rentalOffer.getCar()));
+        try {
+            fileService.uploadOfferImage(rentalOffer, dto.image());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
         return rentalOfferRepository.save(rentalOffer);
     }
 

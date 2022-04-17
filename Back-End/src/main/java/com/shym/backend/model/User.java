@@ -34,6 +34,8 @@ public class User {
 
     private boolean firstTime;
 
+    private String imagePath;
+
     public User(String id, String email, String password, Role role) {
         this.id = id;
         this.email = email;
@@ -77,5 +79,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 }

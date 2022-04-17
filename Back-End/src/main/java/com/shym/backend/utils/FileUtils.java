@@ -12,7 +12,7 @@ import java.util.Objects;
 
 public class FileUtils {
 
-    public static void saveFile(MultipartFile file, String documentPath, String documentName) throws IOException {
+    public static String saveFile(MultipartFile file, String documentPath, String documentName) throws IOException {
         if (!file.isEmpty()) {
             if (!new File(documentPath).exists()) {
                 new File(documentPath).mkdirs();
@@ -21,7 +21,9 @@ public class FileUtils {
             File dest = new File(filePath);
 //            File dest = new File(documentPath + "temp.pdf");
             file.transferTo(Paths.get(dest.getAbsolutePath()));
+            return filePath;
         }
+        return null;
     }
 
     public static String getExtension(MultipartFile file) {
