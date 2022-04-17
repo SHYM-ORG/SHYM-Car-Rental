@@ -1,8 +1,6 @@
 package com.shym.front_end.utils;
 
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -25,11 +22,10 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.shym.front_end.Fragments.HomeFragment;
-import com.shym.front_end.Fragments.ProfileFragment;
+import com.shym.front_end.Fragments.AgencyProfileFragment;
 import com.shym.front_end.R;
 import com.shym.front_end.adapter.CarAdapter;
 import com.shym.front_end.models.Car;
-import com.shym.front_end.ui.bienvenueAgency.BienvenueAgencyActivity;
 import com.shym.front_end.ui.bienvenueClient.BienvenueClientActivity;
 
 import org.json.JSONArray;
@@ -209,7 +205,7 @@ public class VolleyUtils {
                     @Override
                     public void onResponse(JSONObject response) {
                         Toast.makeText(mContext, "Message Sent Successfully!", Toast.LENGTH_SHORT).show();
-                        replaceFragment(new ProfileFragment(),(AppCompatActivity) mContext);
+                        replaceFragment(new AgencyProfileFragment(),(AppCompatActivity) mContext);
                     }
                 },
                 new Response.ErrorListener() {

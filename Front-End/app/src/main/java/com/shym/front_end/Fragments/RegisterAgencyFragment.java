@@ -10,7 +10,6 @@ import android.widget.ProgressBar;
 
 import androidx.fragment.app.Fragment;
 
-import com.shym.front_end.Fragments.ProfileFragment;
 import com.shym.front_end.R;
 import com.shym.front_end.utils.VolleyUtils;
 
@@ -41,8 +40,8 @@ public class RegisterAgencyFragment extends Fragment {
      * @return A new instance of fragment ProfileFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ProfileFragment newInstance(String param1, String param2) {
-        ProfileFragment fragment = new ProfileFragment();
+    public static AgencyProfileFragment newInstance(String param1, String param2) {
+        AgencyProfileFragment fragment = new AgencyProfileFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

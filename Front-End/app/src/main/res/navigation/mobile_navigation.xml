@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.shym.front_end.Fragments.ProfileFragment"
+        android:name="com.shym.front_end.Fragments.AgencyProfileFragment"
         android:label="profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile_agency" />
 </navigation>
