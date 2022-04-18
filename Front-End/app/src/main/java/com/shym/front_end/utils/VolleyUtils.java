@@ -220,4 +220,28 @@ public class VolleyUtils {
         requestQueue.add(jsonobj);
     }
 
+    public static void updateProfile(Map data, Context mContext) {
+        RequestQueue requestQueue = Volley.newRequestQueue(mContext);
+        JSONObject dataJson = new JSONObject(data);
+
+        JsonObjectRequest jsonobj = new JsonObjectRequest(Request.Method.POST, "127.0.0.1:8000/editProfile/", dataJson,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Toast.makeText(mContext, "Profile Updated Successfully!", Toast.LENGTH_SHORT).show();
+                        replaceFragment(new AgencyProfileFragment(),(AppCompatActivity) mContext);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        ShowPopUp(mContext, "Error", "Try later...");
+                    }
+                }
+        ){
+            //here I want to post data to sever
+        };
+        requestQueue.add(jsonobj);
+    }
+
 }

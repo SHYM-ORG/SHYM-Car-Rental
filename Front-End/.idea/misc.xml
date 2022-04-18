@@ -3,17 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/drawable/ic_baseline_description_24.xml" value="0.225" />
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1" />
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_agency_location.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_bienvenue_agency.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_bienvenue_client.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_cat_preference.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_contact_us.xml" value="0.176" />
+        <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_edit_profile.xml" value="0.264" />
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_home.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_login.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_model_preference.xml" value="0.1911073108165883" />
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_profile.xml" value="0.18646616541353384" />
-        <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_profile_agency.xml" value="0.2" />
+        <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_profile_agency.xml" value="0.1" />
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_register_agency.xml" value="0.17769718948322757" />
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_register_client.xml" value="0.1911073108165883" />
         <entry key="app/src/main/res/drawable/gradiant_background.xml" value="0.2845" />

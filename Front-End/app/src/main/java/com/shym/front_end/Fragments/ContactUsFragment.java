@@ -75,13 +75,4 @@ public class ContactUsFragment extends Fragment {
         });
         return view;
     }
-
-    private static void replaceFragment(Fragment fragment, AppCompatActivity activity){
-        FragmentManager fragmentManager=activity.getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_right);
-        fragmentTransaction.replace(R.id.frame_layout,fragment);
-        fragmentTransaction.commit();
-    }
-
 }

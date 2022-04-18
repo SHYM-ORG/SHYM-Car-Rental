@@ -4,14 +4,19 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 
 import com.shym.front_end.R;
@@ -69,6 +74,14 @@ public class AgencyProfileFragment extends Fragment {
 
     Context mContext;
 
+    private static void replaceFragment(Fragment fragment, AppCompatActivity activity){
+        FragmentManager fragmentManager=activity.getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_right);
+        fragmentTransaction.replace(R.id.frame_layout,fragment);
+        fragmentTransaction.commit();
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -77,7 +90,27 @@ public class AgencyProfileFragment extends Fragment {
         String token = sharedPref.getString("token", null);
         System.out.println(token);
         if (!token.equals("null")) {
+            mContext = getActivity();
             View view = inflater.inflate(R.layout.fragment_profile_agency, container, false);
+            LinearLayout edit = view.findViewById(R.id.editBtnLayout);
+            edit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    String phone = ((TextView)getActivity().findViewById(R.id.profilePhone)).getText().toString();
+                    String email = ((TextView)getActivity().findViewById(R.id.profileEmail)).getText().toString();
+                    String location = ((TextView)getActivity().findViewById(R.id.profileLocation)).getText().toString();
+                    String description = ((TextView)getActivity().findViewById(R.id.profileDescription)).getText().toString();
+                    EditProfileFragment editProfileFragment = new EditProfileFragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putString("phone",phone);
+                    bundle.putString("email",email);
+                    bundle.putString("location",location);
+                    bundle.putString("description",description);
+                    editProfileFragment.setArguments(bundle);
+                    replaceFragment(editProfileFragment,(AppCompatActivity) mContext);
+                }
+            });
+
             return view;
         } else {
             View view = inflater.inflate(R.layout.fragment_login, container, false);
