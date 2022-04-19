@@ -1,6 +1,7 @@
 package com.shym.backend.dtoMappers;
 
 import com.shym.backend.dto.AddOfferDTO;
+import com.shym.backend.dto.ListOffersDto;
 import com.shym.backend.model.Car;
 import com.shym.backend.model.RentalOffer;
 
@@ -19,5 +20,16 @@ public class OfferDtoMapper {
         offer.setPricePerDay(dto.pricePerDay());
         offer.setAvailableNow(dto.availableNow());
         return offer;
+    }
+
+    public static ListOffersDto ListOfferDtoMapper(RentalOffer offer) {
+        ListOffersDto dto = new ListOffersDto(
+                offer.getId(),
+                offer.getPricePerDay(),
+                offer.isAvailableNow(),
+                offer.getCar().getModel(),
+                offer.getCar().getSeries()
+        );
+        return dto;
     }
 }

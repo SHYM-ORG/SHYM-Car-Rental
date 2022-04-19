@@ -8,8 +8,11 @@ import com.shym.backend.service.AgencyService;
 import com.shym.backend.service.ClientService;
 import com.shym.backend.service.UserService;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api/account")
@@ -34,7 +37,9 @@ public class UserController {
         );
     }
 
-    @PostMapping("/create/agency")
+    @PostMapping(path="/create/agency",
+            consumes=MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Agency> createAgency(@RequestBody CreateAgencyDto createAgencyDto) {
         return new ResponseEntity<>(
                 agencyService.createAgency(createAgencyDto),
@@ -42,8 +47,22 @@ public class UserController {
         );
     }
 
-    @PostMapping("/addImage/agency")
-    public ResponseEntity<Agency> AddAgencyImage(@RequestBody AgencyImageDto agencyImageDto,
+    @PutMapping(path="/edit/agency",
+            consumes=MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Agency> editAgency(@ModelAttribute @Valid EditAgencyDto editAgencyDto,
+                                             @RequestHeader("Authorization") String jwtToken) {
+        String email = JwtLoginDto.getEmailFromJwtToken(jwtToken);
+        return new ResponseEntity<>(
+                agencyService.editAgency(editAgencyDto, email),
+                HttpStatus.OK
+        );
+    }
+
+    @PutMapping(path="/addImage/agency",
+            consumes="multipart/form-data",
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Agency> AddAgencyImage(@ModelAttribute @Valid AgencyImageDto agencyImageDto,
                                                  @RequestHeader("Authorization") String jwtToken) {
         String email = JwtLoginDto.getEmailFromJwtToken(jwtToken);
         return new ResponseEntity<>(

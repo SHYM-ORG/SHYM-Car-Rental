@@ -46,7 +46,7 @@ public class RentalOffer {
      * the id of the agency publishing the offer
      */
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "AgencyId")
     private Agency agency;
 

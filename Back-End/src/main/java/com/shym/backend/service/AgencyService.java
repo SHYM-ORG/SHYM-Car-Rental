@@ -1,6 +1,7 @@
 package com.shym.backend.service;
 
 import com.shym.backend.dto.CreateAgencyDto;
+import com.shym.backend.dto.EditAgencyDto;
 import com.shym.backend.dtoMappers.AgencyDtoMapper;
 import com.shym.backend.exception.UserAlreadyExistsException;
 import com.shym.backend.model.Agency;
@@ -22,6 +23,15 @@ public class AgencyService {
     public Agency createAgency(CreateAgencyDto dto) {
         if(agencyRepository.existsByEmail(dto.email())) throw new UserAlreadyExistsException("Agency exits!");
         Agency agency = AgencyDtoMapper.createAgencyDtoMapper(dto);
+        return agencyRepository.save(agency);
+    }
+
+    public Agency editAgency(EditAgencyDto dto, String email) {
+        Agency agency = agencyRepository.findByEmail(email).orElseThrow(
+                () -> new UsernameNotFoundException("Agency not found!")
+        );
+        agency.setDescription(dto.description());
+        agency.setName(dto.name());
         return agencyRepository.save(agency);
     }
 
