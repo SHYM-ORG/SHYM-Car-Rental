@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,8 +22,12 @@ import android.widget.TextView;
 
 
 import com.shym.front_end.R;
+import com.shym.front_end.adapter.CarAdapter;
+import com.shym.front_end.databinding.FragmentRentalBinding;
+import com.shym.front_end.models.Car;
 import com.shym.front_end.utils.VolleyUtils;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,6 +37,14 @@ import java.util.Map;
  * create an instance of this fragment.
  */
 public class AgencyProfileFragment extends Fragment {
+
+
+    private RecyclerView recyclerViewCars;
+    private CarAdapter carAdapter;
+
+    private ArrayList<Car> carList;
+
+    private TextView textview;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -85,6 +99,34 @@ public class AgencyProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view1 = inflater.inflate(R.layout.fragment_profile_agency, container, false);
+
+
+
+        recyclerViewCars =(RecyclerView) view1.findViewById(R.id.recycler_car) ;
+        ProgressBar progressBar1;
+        progressBar1 =(ProgressBar) view1.findViewById(R.id.progressbar2);;
+        progressBar1.setVisibility(View.INVISIBLE);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
+        recyclerViewCars.setHasFixedSize(true);
+        linearLayoutManager.setStackFromEnd(true);
+        linearLayoutManager.setReverseLayout(true);
+        recyclerViewCars.setLayoutManager(linearLayoutManager);
+
+        carList = new ArrayList<>();
+        carAdapter = new CarAdapter(getContext(), carList);
+        recyclerViewCars.setAdapter(carAdapter);
+
+        VolleyUtils.readCars("https://fakestoreapi.com/products/",getContext(),carAdapter,carList,progressBar1);
+
+
+
+
+
+
+
+
+
         ProgressBar progressBar;
         SharedPreferences sharedPref = getActivity().getSharedPreferences("auth", getActivity().MODE_PRIVATE);
         String token = sharedPref.getString("token", null);
