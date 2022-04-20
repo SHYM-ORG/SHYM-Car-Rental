@@ -54,4 +54,13 @@ public class AgencyService {
                 () -> new UsernameNotFoundException(String.format("Agency with the email {0} was not found!", email))
         );
     }
+
+    public void addLocation(String location, String email) {
+        Agency agency = agencyRepository.findByEmail(email).orElseThrow(
+                () -> new UsernameNotFoundException(String.format("Agency with the email {0} was not found!", email))
+        );
+        agency.setFirstTime(false);
+        agency.setLocation(location);
+        agencyRepository.save(agency);
+    }
 }

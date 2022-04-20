@@ -1,8 +1,6 @@
 package com.shym.front_end.utils;
 
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -25,10 +22,10 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.shym.front_end.Fragments.HomeFragment;
+import com.shym.front_end.Fragments.AgencyProfileFragment;
 import com.shym.front_end.R;
 import com.shym.front_end.adapter.CarAdapter;
 import com.shym.front_end.models.Car;
-import com.shym.front_end.ui.bienvenueAgency.BienvenueAgencyActivity;
 import com.shym.front_end.ui.bienvenueClient.BienvenueClientActivity;
 
 import org.json.JSONArray;
@@ -40,6 +37,8 @@ import java.util.Map;
 
 public class VolleyUtils {
 
+    //private final static String API_BASE_URL = "https://shym-api.herokuapp.com";
+    private final static String API_BASE_URL = "https://127.0.0.1:8000";
 
     public static  void readCars(String Url,Context context , CarAdapter carAdapter,ArrayList<Car> carList,ProgressBar progressBar) {
 
@@ -110,7 +109,7 @@ public class VolleyUtils {
         RequestQueue requstQueue = Volley.newRequestQueue(mContext);
         JSONObject dataJson = new JSONObject(data);
         progressBar.setVisibility(View.VISIBLE);
-        JsonObjectRequest jsonobj = new JsonObjectRequest(Request.Method.POST, "https://shym-api.herokuapp.com/login",dataJson,
+        JsonObjectRequest jsonobj = new JsonObjectRequest(Request.Method.POST, API_BASE_URL + "/login",dataJson,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
@@ -146,7 +145,7 @@ public class VolleyUtils {
         RequestQueue requstQueue = Volley.newRequestQueue(mContext);
         JSONObject dataJson = new JSONObject(data);
         progressBar.setVisibility(View.VISIBLE);
-        JsonObjectRequest jsonobj = new JsonObjectRequest(Request.Method.POST, "https://shym-api.herokuapp.com/api/account/create/" + type,dataJson,
+        JsonObjectRequest jsonobj = new JsonObjectRequest(Request.Method.POST, API_BASE_URL + "/api/account/create/" + type,dataJson,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
@@ -199,5 +198,52 @@ public class VolleyUtils {
         alertDialog.show();
     }
 
+    public static void sendMessage(Map data, Context mContext) {
+        RequestQueue requestQueue = Volley.newRequestQueue(mContext);
+        JSONObject dataJson = new JSONObject(data);
+
+        JsonObjectRequest jsonobj = new JsonObjectRequest(Request.Method.POST, API_BASE_URL + "/contactUs/", dataJson,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Toast.makeText(mContext, "Message Sent Successfully!", Toast.LENGTH_SHORT).show();
+                        replaceFragment(new AgencyProfileFragment(),(AppCompatActivity) mContext);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        ShowPopUp(mContext, "Error", "Try later...");
+                    }
+                }
+        ){
+            //here I want to post data to sever
+        };
+        requestQueue.add(jsonobj);
+    }
+
+    public static void updateProfile(Map data, Context mContext) {
+        RequestQueue requestQueue = Volley.newRequestQueue(mContext);
+        JSONObject dataJson = new JSONObject(data);
+
+        JsonObjectRequest jsonobj = new JsonObjectRequest(Request.Method.POST, API_BASE_URL + "/editProfile/", dataJson,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Toast.makeText(mContext, "Profile Updated Successfully!", Toast.LENGTH_SHORT).show();
+                        replaceFragment(new AgencyProfileFragment(),(AppCompatActivity) mContext);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        ShowPopUp(mContext, "Error", "Try later...");
+                    }
+                }
+        ){
+            //here I want to post data to sever
+        };
+        requestQueue.add(jsonobj);
+    }
 
 }

@@ -37,6 +37,7 @@ public class ClientService {
         Client client = clientRepository.findByEmail(email).orElseThrow(() -> new UsernameNotFoundException("user not found!"));
         client.setFaveModels(dto.modelPreferences());
         client.setFaveCategories(dto.catPreferences());
+        client.setFirstTime(false);
         clientRepository.save(client);
         return client;
     }

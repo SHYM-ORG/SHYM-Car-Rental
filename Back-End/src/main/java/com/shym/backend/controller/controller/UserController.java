@@ -81,6 +81,16 @@ public class UserController {
         );
     }
 
+    @PostMapping("/add/location")
+    public ResponseEntity<Client> addPreferences(@RequestHeader("Location") String location,
+                                                 @RequestHeader("Authorization") String jwtToken) {
+        String email = JwtLoginDto.getEmailFromJwtToken(jwtToken);
+        this.agencyService.addLocation(location, email);
+        return new ResponseEntity<>(
+                HttpStatus.OK
+        );
+    }
+
     @GetMapping("/get/current")
     public ResponseEntity<? extends User> getCurrentUser(@RequestHeader("Authorization") String jwtToken) throws Throwable {
         String email = JwtLoginDto.getEmailFromJwtToken(jwtToken);
