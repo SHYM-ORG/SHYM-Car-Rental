@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCarAgencyActivity"
+    android:background="?android:attr/windowBackground">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="286dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="28dp"
+        android:text="Add New Car "
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="274dp"
+        android:layout_height="125dp"
+        android:src="@drawable/rental"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.973"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.102" />
+
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="52dp"
+        android:layout_height="38dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="36dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.194" />
+
+
+    <TextView
+        android:id="@+id/post"
+        android:layout_width="110dp"
+        android:layout_height="38dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="64dp"
+        android:text="POST"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageadded"
+        android:layout_width="351dp"
+        android:layout_height="134dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="28dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="268dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="56dp"
+        android:hint="Description..."
+        android:maxLines="5"
+        android:textColor="@color/white"
+
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageadded"
+        app:layout_constraintVertical_bias="0.125" />
+
+    <EditText
+        android:id="@+id/namecar"
+        android:layout_width="268dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="56dp"
+        android:hint="Car Name ..."
+        android:maxLines="5"
+        android:textColor="@color/white"
+
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <EditText
+        android:id="@+id/modelcar"
+        android:layout_width="268dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="56dp"
+        android:hint="Car Modele ..."
+        android:maxLines="5"
+        android:textColor="@color/white"
+
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/namecar"
+        app:layout_constraintVertical_bias="0.122" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

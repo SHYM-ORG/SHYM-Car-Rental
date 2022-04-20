@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.ProfileFragment"
+
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:id="@+id/main"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profilename"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#775C5942"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp">
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="118dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="Profil"
+
+                android:textColor="#6FA592"
+
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="60dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="24dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.102"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.578"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:textColor="#FF0000"
+                android:layout_width="109dp"
+                android:layout_height="27dp"
+                android:layout_marginEnd="148dp"
+
+
+                android:text="Prenom Nom"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.376" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="143dp"
+                android:layout_height="21dp"
+                android:layout_marginEnd="100dp"
+                android:text="Email@email.com"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                app:layout_constraintVertical_bias="0.589" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/favcars"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="0dp"
+            android:background="#AC8B6F"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/profilename"
+            tools:layout_editor_absoluteX="0dp"
+            >
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="404dp"
+                android:layout_height="180dp"
+                android:fillViewport="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/favcars"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="300dp"
+                        android:layout_height="139dp"
+                        android:layout_margin="10dp"
+                        android:background="#DFD6D6">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="94dp"
+                            android:layout_height="71dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.077"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.235"
+                            app:srcCompat="@mipmap/ic_launcher" />
+
+                        <Button
+                            android:id="@+id/button5"
+                            android:layout_width="235dp"
+                            android:layout_height="38dp"
+                            android:text="Details"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.95" />
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="109dp"
+                            android:layout_height="28dp"
+                            android:text="Ford Fiesta"
+                            android:textColor="@color/black"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.654"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.15" />
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="50dp"
+                            android:layout_height="19dp"
+                            android:text="Place"
+                            android:textColor="#5E5656"
+                            android:textSize="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.366" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="300dp"
+                        android:layout_height="139dp"
+                        android:layout_margin="10dp"
+                        android:background="#DFD6D6">
+
+                        <ImageView
+                            android:id="@+id/imageView22"
+                            android:layout_width="94dp"
+                            android:layout_height="71dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.077"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.235"
+                            app:srcCompat="@mipmap/ic_launcher" />
+
+                        <Button
+                            android:id="@+id/button55"
+                            android:layout_width="235dp"
+                            android:layout_height="38dp"
+                            android:text="Details"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.95" />
+
+                        <TextView
+                            android:id="@+id/textView88"
+                            android:layout_width="109dp"
+                            android:layout_height="28dp"
+                            android:text="Ford Fiesta"
+                            android:textColor="@color/black"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.654"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.15" />
+
+                        <TextView
+                            android:id="@+id/textView99"
+                            android:layout_width="50dp"
+                            android:layout_height="19dp"
+                            android:text="Place"
+                            android:textColor="#5E5656"
+                            android:textSize="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.366" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="300dp"
+                        android:layout_height="139dp"
+                        android:layout_margin="10dp"
+                        android:background="#DFD6D6">
+
+                        <ImageView
+                            android:id="@+id/imageView222"
+                            android:layout_width="94dp"
+                            android:layout_height="71dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.077"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.235"
+                            app:srcCompat="@mipmap/ic_launcher" />
+
+                        <Button
+                            android:id="@+id/button555"
+                            android:layout_width="235dp"
+                            android:layout_height="38dp"
+                            android:text="Details"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.95" />
+
+                        <TextView
+                            android:id="@+id/textView888"
+                            android:layout_width="109dp"
+                            android:layout_height="28dp"
+                            android:text="Ford Fiesta"
+                            android:textColor="@color/black"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.654"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.15" />
+
+                        <TextView
+                            android:id="@+id/textView999"
+                            android:layout_width="50dp"
+                            android:layout_height="19dp"
+                            android:text="Place"
+                            android:textColor="#5E5656"
+                            android:textSize="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.366" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="208dp"
+                android:layout_height="34dp"
+                android:text="Favorites Cars"
+                android:textColor="#706B6B"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/horizontalScrollView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.172"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.074" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="408dp"
+            android:background="#AC8B6F"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/favcars"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="365dp"
+                android:layout_height="63dp"
+                android:background="@color/white"
+                android:onClick="goToContactUs"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.223">
+
+
+                <ImageView
+                    android:id="@+id/imageView3333"
+                    android:layout_width="38dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.095"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_contact" />
+
+                <TextView
+                    android:id="@+id/textView1000"
+                    android:layout_width="126dp"
+                    android:layout_height="26dp"
+                    android:text="Contact Us"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout22"
+                android:layout_width="365dp"
+                android:layout_height="63dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <ImageView
+                    android:id="@+id/imageView33333"
+                    android:layout_width="38dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.095"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_edit" />
+
+                <TextView
+                    android:id="@+id/textView10000"
+                    android:layout_width="126dp"
+                    android:layout_height="26dp"
+                    android:text="Edit Profil"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout21"
+                android:layout_width="365dp"
+                android:layout_height="63dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout22"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <ImageView
+                    android:id="@+id/imageView33331"
+                    android:layout_width="38dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.095"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_out" />
+
+                <TextView
+                    android:id="@+id/textView10001"
+                    android:layout_width="126dp"
+                    android:layout_height="26dp"
+                    android:text="Log Out"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
