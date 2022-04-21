@@ -34,6 +34,8 @@ public class AddCarAgencyActivity extends AppCompatActivity {
 
         binding = ActivityAddCarAgencyBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        getSupportActionBar().hide();
+
 
         //close = findViewById(R.id.close);
         //imageAdded = findViewById(R.id.image_added);
@@ -56,11 +58,18 @@ public class AddCarAgencyActivity extends AppCompatActivity {
                 upload();
             }
         });
+        binding.addimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CropImage.activity().start(AddCarAgencyActivity.this);
+            }
+        });
 
-        CropImage.activity().start(AddCarAgencyActivity.this);
+
     }
 
     private void upload() {
+
 
 
 
@@ -86,8 +95,7 @@ public class AddCarAgencyActivity extends AppCompatActivity {
             imageAdded.setImageURI(imageUri);
         } else {
             Toast.makeText(this, "Try again!", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(AddCarAgencyActivity.this , MainActivity.class));
-            finish();
+
         }
     }
 
