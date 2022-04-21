@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -81,6 +82,32 @@ public class RentalOfferController {
                                                        @RequestHeader("Authorization") String jwtToken) {
         return new ResponseEntity<> (
                 rentalOfferService.getOfferDetails(id_offer, jwtToken),
+                HttpStatus.OK
+        );
+    }
+
+    @GetMapping(path = "/get/agencyAvailableCars")
+    public ResponseEntity<List<ListOffersDto>> deleteAvailableCars(@RequestHeader("Authorization") String jwtToken) {
+        return new ResponseEntity<> (
+                rentalOfferService.getAgencyAvailableCars(jwtToken),
+                HttpStatus.OK
+        );
+    }
+
+    @GetMapping(path = "/get/agencyRentedCars")
+    public ResponseEntity<List<ListOffersDto>> deleteRentedCars(@RequestHeader("Authorization") String jwtToken) {
+        return new ResponseEntity<> (
+                rentalOfferService.getAgencyRentedCars(jwtToken),
+                HttpStatus.OK
+        );
+    }
+
+    @GetMapping(path = "/get/OfferImage",
+                produces = {MediaType.IMAGE_JPEG_VALUE, MediaType.IMAGE_PNG_VALUE, "image/jpg"})
+    public ResponseEntity<Byte[]> getOfferImage(@RequestHeader("Authorization") String jwtToken,
+                                                @PathVariable String imageName) throws IOException {
+        return new ResponseEntity<> (
+                rentalOfferService.getImage(imageName),
                 HttpStatus.OK
         );
     }

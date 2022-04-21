@@ -41,4 +41,8 @@ public class FileService {
         FileUtils.saveFile(file,documentPath, documentName);
         user.setImagePath(FileUtils.saveFile(file,documentPath, documentName));
     }
+
+    public String getFileDirectory() {
+        return fileConfig.getDirectory();
+    }
 }

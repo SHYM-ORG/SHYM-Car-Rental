@@ -72,10 +72,7 @@ public class HomeFragment extends Fragment {
         carAdapter = new CarAdapter(getContext(), carList);
         recyclerViewCars.setAdapter(carAdapter);
 
-        VolleyUtils.readCars("https://fakestoreapi.com/products",getContext(),carAdapter,carList,progressBar);
-
-
-
+        VolleyUtils.readAvailableCars(getContext(),carAdapter,carList,progressBar);
 
         return root;
     }

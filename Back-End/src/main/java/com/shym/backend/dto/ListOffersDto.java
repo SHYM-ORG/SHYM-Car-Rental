@@ -11,6 +11,7 @@ public record ListOffersDto (
         int pricePerDay,
         boolean availableNow,
         CarModel model,
-        String series
+        String series,
+        String image
 ){
 }

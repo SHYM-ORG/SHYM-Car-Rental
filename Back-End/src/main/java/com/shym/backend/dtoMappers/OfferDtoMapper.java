@@ -4,6 +4,9 @@ import com.shym.backend.dto.AddOfferDTO;
 import com.shym.backend.dto.ListOffersDto;
 import com.shym.backend.model.Car;
 import com.shym.backend.model.RentalOffer;
+import com.shym.backend.utils.FileConfig;
+import com.shym.backend.utils.FileUtils;
+import org.springframework.web.multipart.MultipartFile;
 
 
 public class OfferDtoMapper {
@@ -28,7 +31,8 @@ public class OfferDtoMapper {
                 offer.getPricePerDay(),
                 offer.isAvailableNow(),
                 offer.getCar().getModel(),
-                offer.getCar().getSeries()
+                offer.getCar().getSeries(),
+                offer.getImagePath()
         );
         return dto;
     }

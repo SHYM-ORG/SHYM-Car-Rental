@@ -24,7 +24,7 @@ public class ClientService {
         if(clientRepository.existsByEmail(dto.email())) throw new UserAlreadyExistsException("Client exits!");
         Client client = ClientDtoMapper.createClientDtoMapper(dto);
         try {
-            fileService.uploadUserImage(client, dto.image());
+            if (dto.image()!=null) fileService.uploadUserImage(client, dto.image());
         } catch (IOException e) {
             throw new RuntimeException(e);
         } catch (NoSuchAlgorithmException e) {

@@ -15,6 +15,7 @@ import com.shym.front_end.models.Car;
 import com.shym.front_end.R;
 
 
+import com.shym.front_end.utils.VolleyUtils;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -44,37 +45,27 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
 
         final Car car = mCars.get(position);
-        Picasso.get().load(car.getImage()).into(holder.imagecar);
-        holder.carmodel.setText(car.getModel());
-        holder.carplace.setText(car.getPlace());
-
-
+        Picasso.get().load(VolleyUtils.getImageUrl(car.getImage())).into(holder.carImage);
+        holder.carModel.setText(car.getModel());
+        holder.carSeries.setText(car.getSeries());
+        holder.carPricePerDay.setText(car.getPricePerDay());
     }
-
-
-
-
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public ImageView imagecar;
-        public Button carbutton;
-
-
-        public TextView carmodel;
-        public TextView carplace;
-
-
+        public ImageView carImage;
+        public Button carButton;
+        public TextView carModel;
+        public TextView carSeries;
+        public TextView carPricePerDay;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
-            imagecar = itemView.findViewById(R.id.carpicture);
-            carbutton = itemView.findViewById(R.id.carbutton);
-            carmodel = itemView.findViewById(R.id.carmodel);
-            carplace = itemView.findViewById(R.id.carplace);
-
-
+            carImage = itemView.findViewById(R.id.carpicture);
+            carButton = itemView.findViewById(R.id.carbutton);
+            carModel = itemView.findViewById(R.id.carmodel);
+            carSeries = itemView.findViewById(R.id.carseries);
+            carPricePerDay = itemView.findViewById(R.id.carpriceperday);
         }
     }
 }

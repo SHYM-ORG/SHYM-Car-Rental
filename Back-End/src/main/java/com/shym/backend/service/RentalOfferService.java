@@ -8,9 +8,13 @@ import com.shym.backend.exception.RentalOfferNotFoundException;
 import com.shym.backend.model.Agency;
 import com.shym.backend.model.RentalOffer;
 import com.shym.backend.repository.RentalOfferRepository;
+import com.shym.backend.utils.FileConfig;
+import com.shym.backend.utils.FileUtils;
 import lombok.AllArgsConstructor;
+import org.apache.commons.io.IOUtils;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
@@ -117,5 +121,28 @@ public class RentalOfferService {
         );
         if (!rentalOffer.getAgency().getId().equals(agency.getId())) throw new AgencyNotOwnerOfOfferException("this offer is not owned by the agency!");
         return rentalOffer;
+    }
+
+    public List<ListOffersDto> getAgencyRentedCars(String jwtToken) {
+        List<ListOffersDto> rentalOffers = getAgencyOffers(jwtToken).stream().filter(
+                (ListOffersDto offer) -> !offer.availableNow()
+        ).toList();
+        return rentalOffers;
+    }
+
+    public List<ListOffersDto> getAgencyAvailableCars(String jwtToken) {
+        List<ListOffersDto> rentalOffers = getAgencyOffers(jwtToken).stream().filter(
+                (ListOffersDto offer) -> !offer.availableNow()
+        ).toList();
+        return rentalOffers;
+    }
+
+    public Byte[] getImage(String image) throws IOException {
+        byte[] imageBytes = FileUtils.getFile(image, fileService.getFileDirectory());
+        Byte[] byteObjects = new Byte[imageBytes.length];
+        int k=0;
+        for(byte b: imageBytes)
+            byteObjects[k++] = b;
+        return byteObjects;
     }
 }
