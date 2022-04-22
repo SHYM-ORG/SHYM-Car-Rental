@@ -8,7 +8,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.MimeTypeMap;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,7 +54,7 @@ public class AddCarAgencyActivity extends AppCompatActivity {
             }
         });
 
-        binding.post.setOnClickListener(new View.OnClickListener() {
+        binding.completeaddcar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 upload();
@@ -65,7 +67,15 @@ public class AddCarAgencyActivity extends AppCompatActivity {
             }
         });
 
+        Spinner category = binding.category;
+        String[] items = new String[]{"Category...", "sports", "minivan", "pickup"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        category.setAdapter(adapter);
 
+        Spinner model = binding.model;
+        items = new String[]{"Model...", "voloxwagen", "mercides", "range"};
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        model.setAdapter(adapter);
     }
 
     private void upload() {

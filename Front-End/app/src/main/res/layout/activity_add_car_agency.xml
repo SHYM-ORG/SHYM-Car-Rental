@@ -5,136 +5,166 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddCarAgencyActivity"
-
+    android:backgroundTint="@color/cardview_dark_background"
     style="@style/Theme.Design.NoActionBar"
     android:background="?android:attr/windowBackground">
 
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:layout_width="286dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="28dp"
-        android:text="Add New Car "
-        android:textColor="@color/black"
+        android:id="@+id/textView11"
+        android:layout_width="1.1in"
+        android:layout_height=".3in"
+        android:layout_marginStart=".1in"
+        android:layout_marginTop=".25in"
+        android:text="Add an offer"
+        android:textColor="@color/white"
         android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="274dp"
-        android:layout_height="125dp"
+        android:layout_width="1in"
+        android:layout_height=".5in"
+        android:layout_marginRight=".1in"
+        android:layout_marginTop=".1in"
         android:src="@drawable/rental"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.973"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.102" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/close"
         android:layout_width="52dp"
         android:layout_height="38dp"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="36dp"
+        android:layout_marginTop=".1in"
+        android:layout_marginEnd=".2in"
         android:src="@drawable/ic_close"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.194" />
-
-
-    <TextView
-        android:id="@+id/post"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginBottom="28dp"
-        android:text="POST"
-        android:textColor="@color/colorPrimary"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.441"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/modelcar"
-        app:layout_constraintVertical_bias="0.818" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <ImageView
-        android:id="@+id/imageadded"
-        android:layout_width="351dp"
-        android:layout_height="134dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="28dp"
-        android:scaleType="centerInside"
-        android:src="@mipmap/ic_launcher"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.39" />
-
-    <ImageButton
-        android:id="@+id/addimage"
-        android:layout_width="75dp"
-        android:layout_height="35dp"
-        android:src="@drawable/ic_add"
-
-
-        app:layout_constraintBottom_toTopOf="@+id/description"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageadded"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_marginTop="1in"
+        app:layout_constraintTop_toBottomOf="@+id/textView11">
+        <LinearLayout
+            android:id="@+id/LinearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/description"
-        android:layout_width="268dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:hint="Description..."
-        android:maxLines="5"
-        android:textColor="@color/white"
+            <ImageView
+                android:id="@+id/imageadded"
+                android:layout_width="2.2in"
+                android:layout_height=".5in"
+                android:layout_marginTop=".1in"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_launcher"
+                 />
 
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageadded"
-        app:layout_constraintVertical_bias="0.202" />
+            <Button
+                android:id="@+id/addimage"
+                android:layout_width="1in"
+                android:layout_height=".3in"
+                android:src="@drawable/ic_add"
+                android:backgroundTint="@color/black"
+                android:text="Add a image" />
 
-    <EditText
-        android:id="@+id/namecar"
-        android:layout_width="268dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:hint="Car Name ..."
-        android:maxLines="5"
-        android:textColor="@color/white"
+            <Spinner
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"
+                android:id="@+id/model"
+                android:layout_width="2.2in"
+                android:backgroundTint="#393838"
+                android:layout_marginTop=".1in"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize=".13in" />
+            <EditText
+                android:id="@+id/series"
+                android:layout_width="2.2in"
+                android:layout_marginTop=".1in"
+                android:layout_height="wrap_content"
+                android:hint="Series..."
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize=".13in" />
+            <Spinner
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"
+                android:id="@+id/category"
+                android:layout_width="2.2in"
+                android:backgroundTint="#393838"
+                android:autofillHints="hi"
+                android:layout_marginTop=".1in"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize=".13in" />
+            <EditText
+                android:id="@+id/color"
+                android:layout_width="2.2in"
+                android:layout_marginTop=".1in"
+                android:layout_height="wrap_content"
+                android:hint="Color..."
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize=".13in" />
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="2.2in"
+                android:layout_marginTop=".1in"
+                android:layout_height="wrap_content"
+                android:hint="Price Per Day..."
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize=".13in" />
+            <RadioGroup
+                android:layout_width="2.2in"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop=".1in">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diesel"
+                    android:paddingLeft=".1in"
+                    android:textColor="@color/white"
+                    android:textSize=".13in"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gasoline"
+                    android:paddingLeft=".1in"
+                    android:textColor="@color/white"
+                    android:textSize=".13in"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="2.2in"
+                android:layout_marginTop=".1in"
+                android:layout_height="wrap_content"
+                android:hint="Description..."
+                android:maxLines="5"
+                android:textColor="@color/white"
+                android:textSize=".13in" />
+            <Button
+                android:id="@+id/completeaddcar"
+                android:layout_width="1in"
+                android:layout_height=".3in"
+                android:layout_marginTop=".1in"
+                android:layout_marginBottom=".5in"
+                android:src="@drawable/ic_add"
+                android:backgroundTint="@color/black"
+                android:text="Add Offer" />
 
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description"
-        app:layout_constraintVertical_bias="0.175" />
 
-    <EditText
-        android:id="@+id/modelcar"
-        android:layout_width="268dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:hint="Car Modele ..."
-        android:maxLines="5"
-        android:textColor="@color/white"
-
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/namecar"
-        app:layout_constraintVertical_bias="0.206" />
-
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
