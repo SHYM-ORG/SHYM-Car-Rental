@@ -13,6 +13,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.shym.front_end.Fragments.AgencyProfileFragment;
 import com.shym.front_end.Fragments.ContactUsFragment;
+import com.shym.front_end.Fragments.DetailsOfferFragment;
 import com.shym.front_end.Fragments.EditProfileFragment;
 import com.shym.front_end.Fragments.HomeFragment;
 import com.shym.front_end.Fragments.RegisterAgencyFragment;
@@ -48,7 +49,8 @@ switch(item.getItemId()){
         replaceFragment(new HomeFragment());
         break;
     case  R.id.rental:
-        replaceFragment(new RentalFragment());
+        replaceFragment(new DetailsOfferFragment());
+        /* only for testing replace with RentalFragment*/
 
         break;
     case  R.id.profile:

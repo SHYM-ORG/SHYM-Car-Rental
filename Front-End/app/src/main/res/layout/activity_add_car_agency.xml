@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddCarAgencyActivity"
+
+    style="@style/Theme.Design.NoActionBar"
     android:background="?android:attr/windowBackground">
 
     <!-- TODO: Update blank fragment layout -->
@@ -50,17 +52,19 @@
     <TextView
         android:id="@+id/post"
         android:layout_width="110dp"
-        android:layout_height="38dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="28dp"
         android:text="POST"
         android:textColor="@color/colorPrimary"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modelcar"
+        app:layout_constraintVertical_bias="0.818" />
 
     <ImageView
         android:id="@+id/imageadded"
@@ -75,10 +79,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.39" />
 
+    <ImageButton
+        android:id="@+id/addimage"
+        android:layout_width="75dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_add"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageadded"
+        app:layout_constraintVertical_bias="0.0" />
+
     <EditText
         android:id="@+id/description"
         android:layout_width="268dp"
-        android:layout_height="38dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:hint="Description..."
         android:maxLines="5"
@@ -88,12 +105,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageadded"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintVertical_bias="0.202" />
 
     <EditText
         android:id="@+id/namecar"
         android:layout_width="268dp"
-        android:layout_height="38dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:hint="Car Name ..."
         android:maxLines="5"
@@ -103,12 +120,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/description"
-        app:layout_constraintVertical_bias="0.12" />
+        app:layout_constraintVertical_bias="0.175" />
 
     <EditText
         android:id="@+id/modelcar"
         android:layout_width="268dp"
-        android:layout_height="38dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:hint="Car Modele ..."
         android:maxLines="5"
@@ -118,6 +135,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/namecar"
-        app:layout_constraintVertical_bias="0.122" />
+        app:layout_constraintVertical_bias="0.206" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

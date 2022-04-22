@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Fragments.RentalFragment">
+
+
+    <View
+        android:id="@+id/rectangle_5"
+        android:layout_width="422dp"
+        android:layout_height="323dp"
+        android:alpha="0.99"
+        android:background="@drawable/rectangle_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="-9dp" /><![CDATA[
+
+
+
+
+
+
+
+
+
+
+
+    " />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ]]>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="248dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:fontFamily="sans-serif-black"
+            android:text="It’s the car of your dreams!"
+            android:textColor="#333333"
+            android:textSize="20dp"
+
+            />
+
+        <TextView
+            android:id="@+id/model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Ford Fiesta"
+            android:textColor="#DD2C00"
+            android:textSize="25dp"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="300dp"
+            android:layout_height="162dp"
+
+            android:layout_gravity="center"
+            android:src="@drawable/ford"
+            android:layout_marginBottom="20dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            app:layout_constraintTop_toBottomOf="@id/rectangle_5"
+            android:layout_marginTop="0dp"
+
+            >
+
+
+            <View
+                android:id="@+id/rectangle_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/rectangle_2">
+
+            </View>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Propreties"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="527dp"
+            android:background="@drawable/newcolor">
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:padding="3dip"
+                    android:text="category"
+                    android:textColor="#333333"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/category"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:text="test"
+                    android:textColor="#333333"
+                    android:textSize="20dp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:padding="3dip"
+                    android:text="color"
+                    android:textColor="#333333"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/color"
+                    android:layout_gravity="center
+    "
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:text="test"
+                    android:textColor="#333333"
+                    android:textSize="20dp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:padding="3dip"
+                    android:text="series"
+                    android:textColor="#333333"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/series"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:text="test"
+                    android:textColor="#333333"
+                    android:textSize="20dp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:padding="3dip"
+                    android:text="consumptionRateHighway"
+                    android:textColor="#333333"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/consumptionRateHighway"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:text="test"
+                    android:textColor="#333333"
+                    android:textSize="20dp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:padding="3dip"
+                    android:text="fuelType"
+                    android:textColor="#333333"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:text="test"
+                    android:textColor="#333333"
+                    android:textSize="20dp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:padding="3dip"
+                    android:text="consumptionRateCity"
+                    android:textColor="#333333"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:text="test"
+                    android:textColor="#333333"
+                    android:textSize="20dp" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+    /* this.model = model;
+    this.category = category;
+    this.color = color;
+    this.series = series;
+    this.fuelType = fuelType;
+    this.consumptionRateCity = consumptionRateCity;
+    this.consumptionRateHighway = consumptionRateHighway;*/
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
