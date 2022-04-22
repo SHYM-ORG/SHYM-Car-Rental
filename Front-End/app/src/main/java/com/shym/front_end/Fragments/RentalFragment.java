@@ -17,10 +17,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.shym.front_end.AddCarAgencyActivity;
-import com.shym.front_end.MainActivity;
-import com.shym.front_end.R;
 import com.shym.front_end.adapter.CarAdapter;
-import com.shym.front_end.databinding.FragmentHomeBinding;
 import com.shym.front_end.databinding.FragmentRentalBinding;
 import com.shym.front_end.models.Car;
 import com.shym.front_end.utils.VolleyUtils;

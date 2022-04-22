@@ -12,7 +12,7 @@
         android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop=".1in"
         android:fontFamily="sans-serif-black"
         android:text="Find Your Car Now "
         android:textColor="@color/white"
@@ -24,26 +24,26 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="226dp"
-        android:layout_height="76dp"
+        android:layout_width="1in"
+        android:layout_height=".5in"
         android:src="@drawable/rental"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.972"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop=".1in"
         app:layout_constraintVertical_bias="0.024" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_width="1.5in"
+        android:layout_height=".3in"
+        android:layout_marginTop=".6in"
         android:ems="10"
         android:hint="Search"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -51,90 +51,97 @@
         android:id="@+id/recycler_car"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:layout_marginStart="44dp"
+        android:layout_marginTop=".1in"
         android:orientation="horizontal"
         android:paddingLeft="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft=".2in"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.415"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <ProgressBar
         android:id="@+id/progressbar"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="108dp"
+        android:layout_width=".3in"
+        android:layout_height=".3in"
+        android:visibility="invisible"
+        android:layout_marginTop=".6in"
         android:backgroundTint="@color/white"
         android:indeterminate="true"
         android:indeterminateTint="#1a09d6"
         android:max="100"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
-    <ImageButton
+    <Button
         android:id="@+id/addcar"
-        android:layout_width="75dp"
-        android:layout_height="38dp"
-        android:layout_marginEnd="36dp"
-        android:src="@drawable/ic_add"
+        android:layout_width="1in"
+        android:layout_height=".25in"
+        android:backgroundTint="@color/black"
+        android:text="Add a car"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom=".2in"
+        app:tint="#7CFC00" />
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="114dp"
+        android:layout_height=".3in"
+        android:layout_marginTop=".6in"
+        android:text="Search"
+        android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textView10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="50dp"
+        android:layout_marginTop=".1in"
+        android:paddingLeft=".3in"
         android:text="Available Cars"
         android:textColor="@color/white"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.264" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="50dp"
+        android:layout_marginTop=".1in"
+        android:paddingLeft=".3in"
         android:text="Rented Cars"
         android:textColor="@color/white"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclercar2"
         app:layout_constraintTop_toBottomOf="@+id/recycler_car"
         tools:layout_editor_absoluteX="0dp" />
 
     <ProgressBar
         android:id="@+id/progressbar2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="136dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width=".3in"
+        android:visibility="invisible"
+        android:layout_height=".3in"
+        android:layout_marginTop=".6in"
+        android:backgroundTint="@color/white"
+        android:indeterminate="true"
+        android:indeterminateTint="#1a09d6"
+        android:max="100"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclercar2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-
-        android:layout_marginBottom="60dp"
+        android:layout_marginTop=".1in"
         android:orientation="horizontal"
         android:paddingLeft="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.264"
+        android:layout_marginLeft=".2in"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

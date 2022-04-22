@@ -49,6 +49,8 @@ switch(item.getItemId()){
         break;
     case  R.id.rental:
         replaceFragment(new RentalFragment());
+        //replaceFragment(new DetailsOfferFragment());
+        /* only for testing replace with RentalFragment*/
 
         break;
     case  R.id.profile:

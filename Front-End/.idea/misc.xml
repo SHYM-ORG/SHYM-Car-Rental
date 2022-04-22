@@ -18,7 +18,9 @@
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_profile_agency.xml" value="0.1" />
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_register_agency.xml" value="0.17769718948322757" />
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_register_client.xml" value="0.1911073108165883" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_add.xml" value="0.2065" />
         <entry key="app/src/main/res/drawable/gradiant_background.xml" value="0.2845" />
+        <entry key="app/src/main/res/drawable/ic_add.xml" value="0.2065" />
         <entry key="app/src/main/res/layout/activity_bienvenue.xml" value="0.6336949585194639" />
         <entry key="app/src/main/res/layout/activity_bienvenue_agency.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/activity_bienvenue_client.xml" value="0.14920906370243694" />
@@ -41,7 +43,7 @@
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/fragment_register_agency.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/fragment_register_client.xml" value="0.14920906370243694" />
-        <entry key="app/src/main/res/layout/fragment_rental.xml" value="0.14920906370243694" />
+        <entry key="app/src/main/res/layout/fragment_rental.xml" value="0.25" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.14920906370243694" />
       </map>
     </option>
