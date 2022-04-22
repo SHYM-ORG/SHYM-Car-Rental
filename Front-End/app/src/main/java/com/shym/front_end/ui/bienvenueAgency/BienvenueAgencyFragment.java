@@ -24,7 +24,6 @@ public class BienvenueAgencyFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
     public BienvenueAgencyFragment() {
         // Required empty public constructor
     }

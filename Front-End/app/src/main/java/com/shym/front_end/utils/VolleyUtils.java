@@ -171,7 +171,7 @@ public class VolleyUtils {
                     @Override
                     public void onResponse(JSONObject response) {
                         progressBar.setVisibility(View.INVISIBLE);
-                        SharedPreferences sharedPreferences = mContext.getSharedPreferences("auth", mContext.MODE_PRIVATE);
+                        SharedPreferences sharedPreferences = mContext.getApplicationContext().getSharedPreferences("auth", mContext.MODE_PRIVATE);
                         SharedPreferences.Editor ed = sharedPreferences.edit();
                         try{
                             ed.putString("token", response.getString("token"));

@@ -73,8 +73,8 @@ public class HomeFragment extends Fragment {
         carAdapter = new CarAdapter(getContext(), carList);
         recyclerViewCars.setAdapter(carAdapter);
 
-        SharedPreferences sharedPref = getActivity().getSharedPreferences("auth", getActivity().MODE_PRIVATE);
-        String token = sharedPref.getString("token", null);
+        SharedPreferences sharedPref = getActivity().getApplicationContext().getSharedPreferences("auth", getActivity().MODE_PRIVATE);
+        String token = sharedPref.getString("token", "null");
         if (!token.equals("null")) {
             VolleyUtils.readAvailableCars(getContext(),carAdapter,carList,progressBar);
         }

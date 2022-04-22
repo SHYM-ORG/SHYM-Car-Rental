@@ -1,5 +1,6 @@
 package com.shym.front_end.Fragments;
 
+import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -118,12 +119,12 @@ public class AgencyProfileFragment extends Fragment {
         recyclerViewCars.setAdapter(carAdapter);
 
         ProgressBar progressBar;
-        SharedPreferences sharedPref = getActivity().getSharedPreferences("auth", getActivity().MODE_PRIVATE);
-        String token = sharedPref.getString("token", null);
+        SharedPreferences sharedPref = getActivity().getApplicationContext().getSharedPreferences("auth", getActivity().MODE_PRIVATE);
+        String token = sharedPref.getString("token", "null");
         if (!token.equals("null")) {
-            VolleyUtils.readAvailableCars(getContext(),carAdapter,carList,progressBar1);
             mContext = getActivity();
             View view = inflater.inflate(R.layout.fragment_profile_agency, container, false);
+            VolleyUtils.readAvailableCars(getContext(),carAdapter,carList,progressBar1);
             LinearLayout edit = view.findViewById(R.id.editBtnLayout);
             edit.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -140,6 +141,18 @@ public class AgencyProfileFragment extends Fragment {
                     bundle.putString("description",description);
                     editProfileFragment.setArguments(bundle);
                     replaceFragment(editProfileFragment,(AppCompatActivity) mContext);
+                }
+            });
+
+            LinearLayout log_out = view.findViewById(R.id.logoutBtn);
+            log_out.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    SharedPreferences sharedPref = view.getContext().getApplicationContext().getSharedPreferences("auth", view.getContext().MODE_PRIVATE);
+                    SharedPreferences.Editor ed = sharedPref.edit();
+                    ed.putString("token", null);
+                    ed.commit();
+                    replaceFragment(new ProfileFragment(), (AppCompatActivity) mContext);
                 }
             });
 

@@ -74,8 +74,8 @@ public class RentalFragment extends Fragment {
         recyclerViewCars.setAdapter(carAdapter);
         recyclerViewCars2.setAdapter(carAdapter2);
 
-        SharedPreferences sharedPref = getActivity().getSharedPreferences("auth", getActivity().MODE_PRIVATE);
-        String token = sharedPref.getString("token", null);
+        SharedPreferences sharedPref = getActivity().getApplicationContext().getSharedPreferences("auth", getActivity().MODE_PRIVATE);
+        String token = sharedPref.getString("token", "null");
         if (!token.equals("null")) {
             VolleyUtils.readAvailableCars(getContext(),carAdapter,carList,progressBar);
             VolleyUtils.readRentedCars(getContext(),carAdapter2,carList2,progressBar2);

@@ -47,6 +47,7 @@
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/fragment_model_preference.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.14920906370243694" />
+        <entry key="app/src/main/res/layout/fragment_profile_agency.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_register_agency.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/fragment_register_client.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/fragment_rental.xml" value="0.25" />
