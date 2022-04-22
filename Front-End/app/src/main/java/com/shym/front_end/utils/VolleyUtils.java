@@ -27,6 +27,8 @@ import com.shym.front_end.Fragments.AgencyProfileFragment;
 import com.shym.front_end.R;
 import com.shym.front_end.adapter.CarAdapter;
 import com.shym.front_end.models.Car;
+import com.shym.front_end.ui.bienvenueAgency.BienvenueAgencyActivity;
+import com.shym.front_end.ui.bienvenueAgency.BienvenueAgencyFragment;
 import com.shym.front_end.ui.bienvenueClient.BienvenueClientActivity;
 
 import org.json.JSONArray;
@@ -46,7 +48,31 @@ public class VolleyUtils {
         return API_BASE_URL + "/api/offer/get/offerImage/" + imageName;
     }
 
-    public static  void readAvailableCars(Context context , CarAdapter carAdapter,ArrayList<Car> carList,ProgressBar progressBar) {
+    public static void setAgencyLocation(Context context, String location) {
+        RequestQueue queue = Volley.newRequestQueue(context);
+        SharedPreferences sharedPref = context.getApplicationContext().getSharedPreferences("auth", context.getApplicationContext().MODE_PRIVATE);
+        String token = sharedPref.getString("token", "null");
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.POST, API_BASE_URL + "/api/account/add/location", null, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {}
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                ShowPopUp(context, "Location not registered!", error.getMessage());
+            }
+        }){
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String>  params = new HashMap<String, String>();
+                params.put("Authorization", token);
+                params.put("Location", location);
+                return params;
+            }
+        };
+        queue.add(jsonArrayRequest);
+    }
+
+    public static void readAvailableCars(Context context , CarAdapter carAdapter,ArrayList<Car> carList,ProgressBar progressBar) {
 
         progressBar.setVisibility(View.VISIBLE);
         RequestQueue queue = Volley.newRequestQueue(context);
@@ -55,7 +81,7 @@ public class VolleyUtils {
         // below is the line where we are making an json array
         // request and then extracting data from each json object.
         SharedPreferences sharedPref = context.getApplicationContext().getSharedPreferences("auth", context.getApplicationContext().MODE_PRIVATE);
-        String token = sharedPref.getString("token", null);
+        String token = sharedPref.getString("token", "null");
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, API_BASE_URL + "/api/offer/get/agencyAvailableCars", null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
@@ -118,7 +144,7 @@ public class VolleyUtils {
         progressBar.setVisibility(View.VISIBLE);
         RequestQueue queue = Volley.newRequestQueue(context);
         SharedPreferences sharedPref = context.getApplicationContext().getSharedPreferences("auth", context.getApplicationContext().MODE_PRIVATE);
-        String token = sharedPref.getString("token", null);
+        String token = sharedPref.getString("token", "null");
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, API_BASE_URL + "/api/offer/get/agencyRentedCars", null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
@@ -178,8 +204,16 @@ public class VolleyUtils {
                             ed.commit();
                         } catch (Exception e){}
                         replaceFragment(new HomeFragment(), (AppCompatActivity) mContext);
-                        Intent intent = new Intent(mContext, BienvenueClientActivity.class);
-                        mContext.startActivity(intent);
+                        Intent intent;
+                        try {
+                            if(response.getBoolean("firstTime")) {
+                                if (response.getString("role").equals("AGENCY")) intent = new Intent(mContext, BienvenueAgencyActivity.class);
+                                else intent = new Intent(mContext, BienvenueClientActivity.class);
+                            mContext.startActivity(intent);
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
                 },
                 new Response.ErrorListener() {

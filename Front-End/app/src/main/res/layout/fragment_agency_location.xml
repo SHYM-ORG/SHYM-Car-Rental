@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.bienvenueAgency.AgencyLocationFragment" />
+    android:orientation="vertical"
+    >
+    <fragment
+        android:layout_weight="1"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.bienvenueAgency.AgencyLocationFragment" />
+    <LinearLayout
+        android:layout_weight="5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back2"
+        android:gravity="center">
+        <Button
+            android:id="@+id/saveLoc"
+            android:backgroundTint="@color/black"
+            android:layout_width="200dp"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:fontFamily="@font/merriweather_bold"
+            android:textSize="20sp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</LinearLayout>

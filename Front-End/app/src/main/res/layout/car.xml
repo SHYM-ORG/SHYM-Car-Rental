@@ -1,53 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="wrap_content">
 
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="300dp"
-        android:layout_height="139dp"
         android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="@color/white"
+        app:cardCornerRadius="30dp"
         tools:ignore="MissingConstraints">
 
         <ImageView
             android:id="@+id/carpicture"
             android:layout_width="94dp"
             android:layout_height="71dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.077"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.235"
             app:srcCompat="@drawable/ford" />
-
-        <Button
-            android:id="@+id/carbutton"
-            android:layout_width="235dp"
-            android:layout_height="38dp"
-            android:text="Details"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.95" />
 
         <TextView
             android:id="@+id/carmodel"
             android:layout_width="109dp"
             android:layout_height="28dp"
+            android:layout_marginLeft=".1in"
+            android:layout_marginTop=".05in"
             android:text="Ford Fiesta"
             android:textColor="@color/black"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.654"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.15" />
+            app:layout_constraintStart_toEndOf="@+id/carpicture"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/carseries"
@@ -55,27 +46,34 @@
             android:layout_height="17dp"
             android:text="series"
             android:textColor="#5E5656"
+            android:layout_marginLeft=".1in"
             android:textSize="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.905"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.368" />
+            app:layout_constraintStart_toEndOf="@+id/carpicture"
+            app:layout_constraintTop_toBottomOf="@+id/carmodel" />
 
         <TextView
             android:id="@+id/carpriceperday"
             android:layout_width="50dp"
             android:layout_height="19dp"
+            android:layout_marginLeft=".1in"
             android:text="price"
             android:textColor="#26580f"
             android:textSize="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/carbutton"
+            app:layout_constraintStart_toEndOf="@+id/carpicture"
+            app:layout_constraintTop_toBottomOf="@+id/carseries" />
+
+        <Button
+            android:id="@+id/carbutton"
+            android:layout_width="235dp"
+            android:layout_height="38dp"
+            android:layout_marginBottom=".1in"
+            android:text="Details"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/carseries"
-            app:layout_constraintVertical_bias="0.357" />
+            app:layout_constraintTop_toBottomOf="@+id/carpriceperday" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

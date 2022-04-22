@@ -1,11 +1,15 @@
 package com.shym.front_end.ui.bienvenueAgency;
 
+import android.Manifest;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.shym.front_end.R;
 
@@ -24,6 +28,7 @@ public class BienvenueAgencyFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
     public BienvenueAgencyFragment() {
         // Required empty public constructor
     }
@@ -59,6 +64,16 @@ public class BienvenueAgencyFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bienvenue_agency, container, false);
+        View view = inflater.inflate(R.layout.fragment_bienvenue_agency, container, false);
+        Button bienv_next = view.findViewById(R.id.bienv_agency_next);
+        bienv_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ActivityCompat.requestPermissions(getActivity(),new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+                ActivityCompat.requestPermissions(getActivity(),new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+                Navigation.findNavController(view).navigate(R.id.agency_welcom_to_location);
+            }
+        });
+        return view;
     }
 }
