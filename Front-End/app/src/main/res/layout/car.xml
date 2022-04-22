@@ -51,16 +51,17 @@
 
         <TextView
             android:id="@+id/carseries"
-            android:layout_width="50dp"
-            android:layout_height="19dp"
+            android:layout_width="162dp"
+            android:layout_height="17dp"
             android:text="series"
             android:textColor="#5E5656"
             android:textSize="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.905"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.366" />
+            app:layout_constraintVertical_bias="0.368" />
 
         <TextView
             android:id="@+id/carpriceperday"
@@ -70,9 +71,10 @@
             android:textColor="#26580f"
             android:textSize="10dp"
             app:layout_constraintBottom_toTopOf="@+id/carbutton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/carseries"
-            app:layout_constraintVertical_bias="0.357"
-            tools:layout_editor_absoluteX="125dp" />
+            app:layout_constraintVertical_bias="0.357" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

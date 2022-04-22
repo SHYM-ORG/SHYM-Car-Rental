@@ -48,7 +48,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder> {
         Picasso.get().load(VolleyUtils.getImageUrl(car.getImage())).into(holder.carImage);
         holder.carModel.setText(car.getModel());
         holder.carSeries.setText(car.getSeries());
-        holder.carPricePerDay.setText(car.getPricePerDay());
+        holder.carPricePerDay.setText(Integer.toString(car.getPricePerDay()) + " DH");
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

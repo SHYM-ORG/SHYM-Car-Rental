@@ -117,13 +117,11 @@ public class AgencyProfileFragment extends Fragment {
         carAdapter = new CarAdapter(getContext(), carList);
         recyclerViewCars.setAdapter(carAdapter);
 
-        VolleyUtils.readAvailableCars(getContext(),carAdapter,carList,progressBar1);
-
         ProgressBar progressBar;
         SharedPreferences sharedPref = getActivity().getSharedPreferences("auth", getActivity().MODE_PRIVATE);
         String token = sharedPref.getString("token", null);
-        System.out.println(token);
         if (!token.equals("null")) {
+            VolleyUtils.readAvailableCars(getContext(),carAdapter,carList,progressBar1);
             mContext = getActivity();
             View view = inflater.inflate(R.layout.fragment_profile_agency, container, false);
             LinearLayout edit = view.findViewById(R.id.editBtnLayout);

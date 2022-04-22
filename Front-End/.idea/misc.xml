@@ -3,7 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="../../../../../../../../layout/custom_preview.xml" value="0.2796875" />
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/drawable/ic_baseline_description_24.xml" value="0.225" />
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1" />
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_agency_location.xml" value="0.20521590423257802" />
@@ -20,9 +19,6 @@
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_register_agency.xml" value="0.17769718948322757" />
         <entry key="..\:/Users/Somaya/AndroidProjects/SHYM-Car-Rental/Front-End/app/src/main/res/layout/fragment_register_client.xml" value="0.1911073108165883" />
         <entry key="app/src/main/res/drawable/gradiant_background.xml" value="0.2845" />
-        <entry key="app/src/main/res/drawable/ic_add.xml" value="0.257" />
-        <entry key="app/src/main/res/drawable/ic_close.xml" value="0.19" />
-        <entry key="app/src/main/res/layout/activity_add_car_agency.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/activity_bienvenue.xml" value="0.6336949585194639" />
         <entry key="app/src/main/res/layout/activity_bienvenue_agency.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/activity_bienvenue_client.xml" value="0.14920906370243694" />
@@ -31,7 +27,7 @@
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/activity_start.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.29243266353142366" />
-        <entry key="app/src/main/res/layout/car.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/car.xml" value="0.9" />
         <entry key="app/src/main/res/layout/fragment_agency_location.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/fragment_bienvenue_agency.xml" value="0.14920906370243694" />
         <entry key="app/src/main/res/layout/fragment_bienvenue_client.xml" value="0.14920906370243694" />

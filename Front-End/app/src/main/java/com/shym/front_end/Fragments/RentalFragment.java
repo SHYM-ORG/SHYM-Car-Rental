@@ -1,6 +1,7 @@
 package com.shym.front_end.Fragments;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -76,9 +77,12 @@ public class RentalFragment extends Fragment {
         recyclerViewCars.setAdapter(carAdapter);
         recyclerViewCars2.setAdapter(carAdapter2);
 
-        VolleyUtils.readAvailableCars(getContext(),carAdapter,carList,progressBar);
-        VolleyUtils.readRentedCars(getContext(),carAdapter2,carList2,progressBar2);
-
+        SharedPreferences sharedPref = getActivity().getSharedPreferences("auth", getActivity().MODE_PRIVATE);
+        String token = sharedPref.getString("token", null);
+        if (!token.equals("null")) {
+            VolleyUtils.readAvailableCars(getContext(),carAdapter,carList,progressBar);
+            VolleyUtils.readRentedCars(getContext(),carAdapter2,carList2,progressBar2);
+        }
         binding.addcar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

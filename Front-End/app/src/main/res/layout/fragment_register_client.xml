@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.ProfileFragment"
+    tools:context=".Fragments.AgencyProfileFragment"
 
     >
     <RelativeLayout
@@ -116,6 +116,7 @@
                     android:fontFamily="sans-serif-condensed-light"
                     android:hint="Password"
                     android:inputType="textPassword" />
+
 
 
                 <Button

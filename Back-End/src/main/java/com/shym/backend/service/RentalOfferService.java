@@ -132,17 +132,18 @@ public class RentalOfferService {
 
     public List<ListOffersDto> getAgencyAvailableCars(String jwtToken) {
         List<ListOffersDto> rentalOffers = getAgencyOffers(jwtToken).stream().filter(
-                (ListOffersDto offer) -> !offer.availableNow()
+                (ListOffersDto offer) -> offer.availableNow()
         ).toList();
         return rentalOffers;
     }
 
-    public Byte[] getImage(String image) throws IOException {
+    public byte[] getImage(String image) throws IOException {
         byte[] imageBytes = FileUtils.getFile(image, fileService.getFileDirectory());
         Byte[] byteObjects = new Byte[imageBytes.length];
         int k=0;
         for(byte b: imageBytes)
             byteObjects[k++] = b;
-        return byteObjects;
+        return imageBytes;
+        //return fileService.getFileDirectory() + image;
     }
 }

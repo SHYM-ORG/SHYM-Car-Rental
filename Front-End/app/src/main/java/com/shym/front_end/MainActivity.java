@@ -6,19 +6,15 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
+import com.shym.front_end.Fragments.AgencyProfileFragment;
+import com.shym.front_end.Fragments.ContactUsFragment;
+import com.shym.front_end.Fragments.EditProfileFragment;
 import com.shym.front_end.Fragments.HomeFragment;
-import com.shym.front_end.Fragments.ProfileFragment;
 import com.shym.front_end.Fragments.RegisterAgencyFragment;
 import com.shym.front_end.Fragments.RegisterClientFragment;
 import com.shym.front_end.Fragments.RentalFragment;
@@ -56,7 +52,7 @@ switch(item.getItemId()){
 
         break;
     case  R.id.profile:
-        replaceFragment(new ProfileFragment());
+        replaceFragment(new AgencyProfileFragment());
 
         break;
 }
@@ -82,8 +78,9 @@ switch(item.getItemId()){
         replaceFragment(new RegisterAgencyFragment());
     }
     public void goToLogin (View view) {
-        replaceFragment(new ProfileFragment());
+        replaceFragment(new AgencyProfileFragment());
     }
+    public void goToContactUs(View view) { replaceFragment(new ContactUsFragment()); }
 
 
 }

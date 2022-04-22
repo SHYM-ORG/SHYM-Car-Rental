@@ -8,8 +8,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.shym.front_end.R;
 import com.shym.front_end.utils.VolleyUtils;
@@ -17,7 +21,7 @@ import com.shym.front_end.utils.VolleyUtils;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RegisterClientFragment extends Fragment {
+public class ContactUsFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,7 +32,7 @@ public class RegisterClientFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public RegisterClientFragment() {
+    public ContactUsFragment() {
         // Required empty public constructor
     }
 
@@ -41,8 +45,8 @@ public class RegisterClientFragment extends Fragment {
      * @return A new instance of fragment ProfileFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static AgencyProfileFragment newInstance(String param1, String param2) {
-        AgencyProfileFragment fragment = new AgencyProfileFragment();
+    public static ContactUsFragment newInstance(String param1, String param2) {
+        ContactUsFragment fragment = new ContactUsFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -55,29 +59,20 @@ public class RegisterClientFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_register_client, container, false);
+        View view = inflater.inflate(R.layout.fragment_contact_us, container, false);
         mContext = getActivity();
-        Button register = view.findViewById(R.id.register_client_button);
-        ProgressBar progressBar;
-        progressBar = (ProgressBar) view.findViewById(R.id.progressbar);
-        progressBar.setVisibility(View.INVISIBLE);
-        register.setOnClickListener(new View.OnClickListener() {
+        Button send = view.findViewById(R.id.contact_us_send);
+        send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String firstName = ((EditText)getActivity().findViewById(R.id.editTextFirstName)).getText().toString();
-                String lastName = ((EditText)getActivity().findViewById(R.id.editTextLastName)).getText().toString();
-                String email = ((EditText)getActivity().findViewById(R.id.editTextTextEmail)).getText().toString();
-                String password = ((EditText)getActivity().findViewById(R.id.editTextPassword)).getText().toString();
+                String email = ((EditText)getActivity().findViewById(R.id.contactus_email_text)).getText().toString();
+                String message = ((EditText)getActivity().findViewById(R.id.contactus_message_text)).getText().toString();
                 Map<String, String> data = new HashMap();
-                data.put("firstName", firstName);
-                data.put("lastName", lastName);
                 data.put("email", email);
-                data.put("password", password);
-                VolleyUtils.signUpClient(data, mContext, progressBar);
+                data.put("message", message);
+                VolleyUtils.sendMessage(data, mContext);
             }
         });
         return view;
     }
-
-
 }

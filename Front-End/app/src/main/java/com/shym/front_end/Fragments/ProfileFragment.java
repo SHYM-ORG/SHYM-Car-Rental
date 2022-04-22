@@ -75,7 +75,6 @@ public class ProfileFragment extends Fragment {
         ProgressBar progressBar;
         SharedPreferences sharedPref = getActivity().getSharedPreferences("auth", getActivity().MODE_PRIVATE);
         String token = sharedPref.getString("token", null);
-        System.out.println(token);
         if (!token.equals("null")) {
             View view = inflater.inflate(R.layout.fragment_profile, container, false);
             return view;

@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -33,15 +34,16 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 public class VolleyUtils {
 
-    private final static String API_BASE_URL = "https://shym-api.herokuapp.com";
-    //private final static String API_BASE_URL = "https://127.0.0.1:8000";
+    // private final static String API_BASE_URL = "https://shym-api.herokuapp.com";
+    private final static String API_BASE_URL = "http://10.1.9.111:8000";
 
     public static String getImageUrl(String imageName) {
-        return API_BASE_URL + "/get/offerImage?imageName=" + imageName;
+        return API_BASE_URL + "/api/offer/get/offerImage/" + imageName;
     }
 
     public static  void readAvailableCars(Context context , CarAdapter carAdapter,ArrayList<Car> carList,ProgressBar progressBar) {
@@ -52,12 +54,15 @@ public class VolleyUtils {
         // of array so we are making a json array request.
         // below is the line where we are making an json array
         // request and then extracting data from each json object.
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, API_BASE_URL + "/get/agencyAvailableCars", null, new Response.Listener<JSONArray>() {
+        SharedPreferences sharedPref = context.getApplicationContext().getSharedPreferences("auth", context.getApplicationContext().MODE_PRIVATE);
+        String token = sharedPref.getString("token", null);
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, API_BASE_URL + "/api/offer/get/agencyAvailableCars", null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
                 progressBar.setVisibility(View.INVISIBLE);
                 // progressBar.setVisibility(View.GONE);
                 // courseRV.setVisibility(View.VISIBLE);
+                System.out.println(response);
                 for (int i = 0; i < response.length(); i++) {
                     // creating a new json object and
                     // getting each object from our json array.
@@ -70,8 +75,8 @@ public class VolleyUtils {
                         // in below line we are extracting a string with
                         // its key value from our json object.
                         // similarly we are extracting all the strings from our json object.
-                        String idOffer = responseObj.getString("idOffer");
-                        String model = responseObj.getString("title");
+                        String idOffer = responseObj.getString("offerId");
+                        String model = responseObj.getString("model");
                         String image = responseObj.getString("image");
                         String series = responseObj.getString("series");
                         boolean availableNow = responseObj.getBoolean("availableNow");
@@ -97,7 +102,14 @@ public class VolleyUtils {
                 ShowPopUp(context, "ERRROR", error.getMessage());
 
             }
-        });
+        }){
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String>  params = new HashMap<String, String>();
+                params.put("Authorization", token);
+                return params;
+            }
+        };;
         queue.add(jsonArrayRequest);
     }
 
@@ -105,7 +117,9 @@ public class VolleyUtils {
 
         progressBar.setVisibility(View.VISIBLE);
         RequestQueue queue = Volley.newRequestQueue(context);
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, API_BASE_URL + "/get/agencyRentedCars", null, new Response.Listener<JSONArray>() {
+        SharedPreferences sharedPref = context.getApplicationContext().getSharedPreferences("auth", context.getApplicationContext().MODE_PRIVATE);
+        String token = sharedPref.getString("token", null);
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, API_BASE_URL + "/api/offer/get/agencyRentedCars", null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
                 progressBar.setVisibility(View.INVISIBLE);
@@ -136,7 +150,14 @@ public class VolleyUtils {
                 ShowPopUp(context, "ERRROR", error.getMessage());
 
             }
-        });
+        }){
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String>  params = new HashMap<String, String>();
+                params.put("Authorization", token);
+                return params;
+            }
+        };
         queue.add(jsonArrayRequest);
     }
 

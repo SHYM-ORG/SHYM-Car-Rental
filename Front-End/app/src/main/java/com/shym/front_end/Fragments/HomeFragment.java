@@ -3,6 +3,7 @@ package com.shym.front_end.Fragments;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -72,7 +73,11 @@ public class HomeFragment extends Fragment {
         carAdapter = new CarAdapter(getContext(), carList);
         recyclerViewCars.setAdapter(carAdapter);
 
-        VolleyUtils.readAvailableCars(getContext(),carAdapter,carList,progressBar);
+        SharedPreferences sharedPref = getActivity().getSharedPreferences("auth", getActivity().MODE_PRIVATE);
+        String token = sharedPref.getString("token", null);
+        if (!token.equals("null")) {
+            VolleyUtils.readAvailableCars(getContext(),carAdapter,carList,progressBar);
+        }
 
         return root;
     }

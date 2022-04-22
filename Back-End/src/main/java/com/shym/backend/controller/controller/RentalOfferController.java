@@ -3,6 +3,7 @@ package com.shym.backend.controller.controller;
 import com.shym.backend.dto.*;
 import com.shym.backend.model.RentalOffer;
 import com.shym.backend.service.RentalOfferService;
+import org.apache.commons.io.IOUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 @RestController
@@ -102,11 +104,14 @@ public class RentalOfferController {
         );
     }
 
-    @GetMapping(path = "/get/OfferImage",
-                produces = {MediaType.IMAGE_JPEG_VALUE, MediaType.IMAGE_PNG_VALUE, "image/jpg"})
-    public ResponseEntity<Byte[]> getOfferImage(@RequestHeader("Authorization") String jwtToken,
-                                                @PathVariable String imageName) throws IOException {
-        return new ResponseEntity<> (
+    @GetMapping(path = "/get/offerImage/{imageName}",
+                produces = {MediaType.IMAGE_JPEG_VALUE, MediaType.IMAGE_PNG_VALUE, "image/jpg"}
+                /*produces = MediaType.IMAGE_PNG_VALUE*/)
+    public ResponseEntity<?> getOfferImage(@PathVariable String imageName) throws IOException {
+        /*InputStream in = getClass()
+                .getResourceAsStream(System.getProperty("user.dir") + "data/files/" + imageName);
+        return IOUtils.toByteArray(in);*/
+        return new ResponseEntity<>(
                 rentalOfferService.getImage(imageName),
                 HttpStatus.OK
         );
